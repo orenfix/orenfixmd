@@ -1,0 +1,148 @@
+body, h1, h2, h3, small, p, footer {
+	margin: 0;
+	padding: 0;
+}
+
+.outerWrapper {
+	font-size: 100%;
+	padding: 1em;
+	font-family: arial, sans-serif;
+	font-weight: normal;
+	line-height: 1em;
+	max-width: 360px;
+}
+
+.outerWrapper-toc {
+	font-size: 100%;
+	padding: 0;
+	font-family: arial, sans-serif;
+	font-weight: normal;
+	line-height: 1em;
+	max-width: 60em;
+}
+
+.outerWrapper-about {
+	font-size: 100%;
+	padding: 1em;
+	font-family: arial, sans-serif;
+	font-weight: normal;
+	line-height: 1em;
+	max-width: 60em;
+}
+
+.outerWrapper-about p {
+	padding-bottom: .8em;
+}
+
+.outerWrapper-about a {
+	display: inline-block;
+	font-size: .9em;
+	padding-bottom: .8em;
+	line-height: 1.3em;
+}
+
+.header-toc {
+	padding: 1em 0 0 1em;
+}
+
+.back {
+	position: absolute;
+	top: 1em;
+	left: 1em;
+}
+
+h1 {
+	font-size: 1.8em;
+	font-weight: bold;
+	padding-bottom: .5em;
+	line-height: 1em;
+	color: #7cb72f;;
+}
+
+h2 {
+	font-size: 1.2em;
+	font-weight: normal;
+	padding-bottom: .8em;
+	color: rgb(100,100,100);
+}
+
+h3 {
+	font-size: 1.1em;
+	margin: 1.2em 0 1.8em 5em;
+	line-height: 1.2em;
+}
+
+h4 {
+	font-size: 1em;
+	font-weight: bold;
+	margin: 0;
+	padding: 1em 0 .5em 0;
+}
+
+.ui-page-theme-a a {
+	font-weight: normal;
+}
+
+#label-height {
+	padding-top: 1.5em;
+}
+
+small {
+	font-size: .8em;
+}
+
+.border {
+	max-width: 360px;
+	border: 3px solid #7cb72f;
+	background-color: rgb(244,244,244);
+	padding: .6em .8em;
+	border-radius: 10px;
+	line-height: 1.5em;
+}
+
+button.ui-btn {
+	display: inline;
+	margin: 1em 0;
+}
+
+.input p {
+	padding-bottom: .8em;
+}
+
+div.ui-select {
+	padding-bottom: 1em;
+}
+
+div.ui-input-text {
+	margin-bottom: 1em;
+}
+
+div.ui-field-contain {
+	border: 0;
+}
+
+.ui-field-contain > label,
+.ui-field-contain .ui-controlgroup-label {
+	float: left;
+	width: 30%;
+	margin: .5em 2% 0 0;
+}
+
+.ui-field-contain > label ~ [class*="ui-"],
+.ui-field-contain .ui-controlgroup-controls {
+	float: left;
+	width: 68%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#pcrs .ui-field-contain .ui-controlgroup-label {
+	width: 40%;
+}
+
+#pcrs .ui-field-contain .ui-controlgroup-controls {
+	float: right;
+	width: auto;
+}
+
