@@ -96,7 +96,7 @@ $(document).ready(function() {
 		e.preventDefault();
 		var inr = parseFloat($("#inr").val());
 		inr=(inr+.1).toFixed(1);
-		$("#inr").val(inrMeld).trigger("blur");
+		$("#inr").val(inr).trigger("blur");
 	});
 
 	$("#inrButtonPlus").click(function(e) {
