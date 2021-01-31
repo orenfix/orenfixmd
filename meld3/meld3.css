@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+html, body, h1, h2, h3, label, input, small, p, footer, a {
+	margin: 0;
+	padding: 0;
+}
+
+body, input.ui-slider-input {
+    font-family: 'Roboto', Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+#mainContent {
+	margin: 0;
+	padding: .8em;
+	font-size: 80%;
+	font-weight: normal;
+	line-height: 1em;
+}
+
+h1 {
+	font-size: 1.8em;
+	font-weight: 700;
+	padding-bottom: .5em;
+	line-height: 1em;
+	color: #3baae3;
+}
+
+h2 {
+	font-size: 1.2em;
+	padding-bottom: .5em;
+	line-height: 1em;
+	color: black;
+}
+
+h3 {
+	font-size: .75em;
+	color: black;
+	font-weight: normal;
+	line-height: 1em;
+	padding-bottom: .2em;
+}
+
+#inputMeld p {
+	padding-bottom: .5em;
+}
+
+.slider {
+	padding: 0.3em 0;
+	max-width: 700px;
+}
+
+#inputMeld label {
+/*	font-weight: bold; */
+	margin: 0;
+}
+
+#inputMeld .ui-slider-track {
+	margin: .7em .8em 0 6.5em;
+}
+
+.ui-slider .ui-slider-bg.ui-btn-active {
+	background-color: #3baae3;
+}
+
+div.ui-slider {
+	display: inline-block;
+	width: 70%;
+}
+
+#inputMeld input {
+	border: 1px solid #3baae3;
+	width: 3.5em;
+	height: 2.5em;
+	border-radius: 4px;
+	font-size: 1em;
+}
+
+label.flipswitchLabel {
+	display: inline-block;
+	padding-right: 2em;
+}
+
+.ui-page-theme-a .sex a, .ui-page-theme-a .yesno a {
+    font-weight: 700;
+}
+
+.ui-flipswitch.ui-shadow-inset.ui-bar-inherit.ui-corner-all.ui-mini.ui-flipswitch-active {
+	background-color: #3baae3;
+}
+
+.ui-flipswitch.ui-shadow-inset.ui-bar-inherit.ui-corner-all.ui-mini {
+	margin-top: 0;
+	border-radius: 10em;
+}
+
+.ui-flipswitch .ui-btn.ui-flipswitch-on {
+  text-indent: -4.8em;
+}
+
+.ui-flipswitch .ui-flipswitch-off {
+  text-indent: 1em;
+}
+
+.ui-flipswitch {
+  width: 7.875em;
+}
+
+.ui-flipswitch.ui-flipswitch-active {
+  padding-left: 6em;
+  width: 1.875em;
+}
+
+.yesno .ui-flipswitch {
+	width: 5.875em;
+}
+
+.yesno .ui-flipswitch.ui-flipswitch-active {
+  padding-left: 4em;
+  width: 1.875em;
+}
+
+.yesno .ui-flipswitch .ui-btn.ui-flipswitch-on {
+	text-indent: -3.2em;
+}
+
+.yesno .ui-flipswitch .ui-btn.ui-flipswitch-off {
+	text-indent: 10em;
+}
+
+.sex .ui-flipswitch-off {
+	text-indent: 1.8em;
+}
+
+button.ui-btn.ui-shadow.ui-corner-all {
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+	padding: 0;
+	top: -.4em;
+}
+
+.small {
+	font-size: .8em;
+	font-style: italic;
+}
+
+div#outputContainer {
+	width: 100%;
+	max-width: 600px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+div#outputMeld, div#probabilityBox {
+	margin: .6em auto;
+	padding: .6em .8em;
+	width: 14em;
+	border: 1px solid #3baae3;
+	border-radius: 6px;
+	line-height: 1.5em;
+	font-size: 1.5em;
+	color: #2779aa;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 80px;
+}
+
+div#probabilityBox {
+	text-align: center;
+}
+
+.result {
+	color: black;
+	float: right;
+}
+
+footer {
+	margin: 0 auto;
+	padding-top: .6em;
+	font-size: 1em;
+	text-align: center;
+	border-top: 1px solid rgb(150,150,150);
+}
+
+footer p {
+	padding-bottom: 0.4em;
+}
+
+.ui-page-theme-a a {
+	font-weight: normal;
+}
+
+@media only screen and (min-width: 660px) {
+	#mainContent {
+		font-size: 100%;
+	}
+
+	.slider {
+		padding: .8em 0;
+	}
+
+	div#outputContainer {
+		width: 90%;
+	}
+
+	div#outputMeld, div#probabilityBox {
+		margin: .6em 0;
+	}
+
+	#meld11 {
+		text-align: left;
+	}
+
+	footer {
+		text-align: left;
+	}
+}
+
+@media only screen and (min-width: 360px) {
+	#inputMeld input {
+		width: 4em;
+	}
+
+	button.ui-btn.ui-shadow.ui-corner-all {
+		display: inline-block;
+		width: 3em;
+	}
+
+	div#outputContainer {
+		flex-direction: row;
+	}
+
+}

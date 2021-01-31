@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang='en-US'>
+	<head>
+		<meta charset='UTF-8'>
+		<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0" />
+		<meta name='apple-web-app-capable' content='yes' />
+		<link type='text/css' rel='apple-touch-icon' href='MELD-web-app-icon.jpg' />
+		<link href="favicon.ico" rel="shortcut icon" type="images/x-icon" />
+		<!--[if lt IE 9]>
+			<script src="html5shiv.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
+		<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="jquery.mobile-1.4.5.min.js"></script>
+		<script type="text/javascript" src="meld3.js"></script>
+		<link rel="stylesheet" href="meld3.css">
+		<script src='respond.min.js' type='text/javascript' ></script>
+		<title>MELD 3.0</title>
+
+	<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-60364330-2', 'auto');
+		  ga('send', 'pageview');
+
+	</script>
+
+	<head>
+	<body>
+	<div id="mainContent">
+			<h1>MELD 3.0 Calculator</h1>
+			<div id="inputMeld">
+				<div class="slider">
+					<label for="inr">INR</label>
+					<input type="range" id="inr" min="1" max="15" value="1" step=".1" data-highlight="true">
+					<button id="inrButtonMinus">-</button><button id="inrButtonPlus" value="+">+</button>
+				</div>
+				<div class="slider">
+					<label for="bili">Bilirubin (mg/dL)</label>
+					<input type="range" id="bili" min="1" max="50" value="1" step=".1" data-highlight="true">
+					<button id="biliButtonMinus">-</button><button id="biliButtonPlus">+</button>
+				</div>
+				<div class="slider">
+					<label for="creatinine">Creatinine (mg/dL)</label>
+					<input type="range" id="creatinine" value="1" min="1" max="3" step=".01" data-highlight="true">
+					<button id="creatinineButtonMinus" value="-">-</button><button id="creatinineButtonPlus" value="+">+</button>
+					<p class="small">Maximum creatinine = 3 mg/dL (for MELD 3.0) or 4 mg/dL (for all other scores)</p>
+					<p class="small">Values of bilirubin, creatinine and INR default to minimum of 1</p>
+				</div>
+				<div class="slider">
+					<label for="sodium">Sodium (mmol/L)</label>
+					<input type="range" id="sodium" value="137" min="125" max="137" step="1" data-highlight="true">
+					<button id="sodiumButtonMinus">-</button><button id="sodiumButtonPlus">+</button>
+					<p class="small">Sodium range for calculator is 125-137 mmol/L</p>
+				</div>	
+				<div class="slider">
+					<label for="albumin">Albumin (g/dL)</label>
+					<input type="range" id="albumin" value="3.5" min="1.5" max="3.5" step=".1" data-highlight="true">
+					<button id="albuminButtonMinus">-</button><button id="albuminButtonPlus">+</button>
+					<p class="small">Albumin range for calculator is 1.5-3.5 g/dL</p>
+				</div>				
+				<div class="slider yesno">
+					<label for="dialysis" class="flipswitchLabel">Dialysis?</label>
+					<input id="dialysis" type="checkbox" data-role="flipswitch" data-on-text="Yes" data-off-text="No" data-mini="true">
+					<p class="small">2 or more dialysis treatments within the prior week or 24 hours of CVVHD within the prior week</p>
+					<p class="small">Default creatinine for dialysis = 3 mg/dL</p>
+				</div>
+				<div class="slider sex">
+					<label for="sex" class="flipswitchLabel">Sex?</label>
+					<input id="sex" type="checkbox" data-role="flipswitch" data-on-text="Female" data-off-text="Male" data-mini="true">
+				</div>
+			</div>
+			<div id="outputContainer">
+				<div id="outputMeld">
+					<p>MELD 3.0: <span id="resultMeld3" class="result"></span></p>
+					<p>MELD 3.0 without albumin: <span id="resultMeld3woAlb" class="result"></span></p>
+					<p><small>MELD-Na: <span id="resultMeldNa" class="result"></span></small></p>
+					<p><small>MELD: <span id="resultMeld" class="result"></span></small></p>
+				</div>
+<!--				<div id="probabilityBox">
+					<h3>Predicted 90-day probability of death</h3>
+					<p id="probability">82&#37;</p>
+				</div>  -->
+<!--				<div class="clr"></div>  -->
+			</div>
+			<footer>
+				<p>&copy; <script>document.write(new Date().getFullYear());</script>. All rights reserved.</p> 
+				<p>Designed and developed by Oren Fix, MD</p>
+				<p>Concept by Scott Biggins, MD</p>
+				<p><a href="" target="_blank">MELD 3.0 reference coming soon</a></p>
+			</footer>
+		</div>
+	</body>
+</html>
