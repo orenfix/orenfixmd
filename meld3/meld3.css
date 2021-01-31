@@ -68,6 +68,10 @@ div.ui-slider {
 	width: 70%;
 }
 
+.ui-slider-handle {
+	user-select: none;
+}
+
 #inputMeld input {
 	border: 1px solid #3baae3;
 	width: 3.5em;
