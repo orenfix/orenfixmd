@@ -39,6 +39,7 @@
 				<li><a href="#nafld" data-transition="slide">NAFLD Fibrosis Score</a></li>
 				<li><a href="#nas" data-transition="slide">NAFLD Activity Score</a></li>
 				<li><a href="#pcrs" data-transition="slide">PCRS Calculator</a></li>
+				<li><a href="#retreat" data-transition="slide">RETREAT Calculator</a></li>
 				<li><a href="#about" data-transition="slide">About</a></li>
 			</ul>
 		</div>
@@ -79,6 +80,11 @@
 				<a href="https://www.ncbi.nlm.nih.gov/pubmed/15915461" target="_blank">Kleiner DE, Brunt EM, Van Natta M, et al. Design and validation of a histological scoring system for nonalcoholic fatty liver disease. Hepatology 2005;41(6):1313-21. PMID: 15915461</a>
 				<h4>Predicting Cancer Recurrence Score (PCRS):</h4>
 				<a href="https://www.ncbi.nlm.nih.gov/pubmed/18581511" target="_blank">Chan EY, Larson AM, Fix OK, et al. Identifying risk for recurrent hepatocellular carcinoma after liver transplantation: implications for surveillance studies and new adjuvant therapies. Liver Transpl 2008 Jul;14(7):956-65. PMID: 18581511</a>
+				<h4>Risk Estimation of Tumor Recurrence After Transplant (RETREAT):</h4>
+				<a href="https://www.ncbi.nlm.nih.gov/pubmed/27838698" target="_blank">Mehta N, Heimbach J, Harnois DM, et al. Validation of a Risk Estimation of Tumor Recurrence After Transplant (RETREAT) score for hepatocellular carcinoma recurrence after liver transplant. JAMA Oncol 2017;3(4):493-500. PMID: 27838698</a>
+				<a href="https://www.ncbi.nlm.nih.gov/pubmed/29068145" target="_blank">Mehta N, Dodge JL, Roberts JP, et al. Validation of the prognostic power of the RETREAT score for hepatocellular carcinoma recurrence using the UNOS database. Am J Transplant 2018 May;18(5)1206-1213. PMID: 29068145</a>
+				<a href="https://www.ncbi.nlm.nih.gov/pubmed/31710773" target="_blank">Verna EC, Patel YA, Aggarwal A, et al. Liver transplantation for hepatocellular carcinoma: management after the transplant. Am J Transplant. 2020;20(2):333-347. PMID: 31710773</a>
+				<a href="https://www.ncbi.nlm.nih.gov/pubmed/34331914" target="_blank">Mehta N, Frenette C, Tabrizian P, et al. Downstaging Outcomes for Hepatocellular Carcinoma: Results from the Multicenter Evaluation of Reduction in Tumor Size before Liver Transplantation (MERITS-LT) Consortium. Gastroenterol. 2021;161:1502-1512. PMID: 34331914</a>
 				<p>&copy; <script>document.write(new Date().getFullYear());</script> Oren Fix. All rights reserved.</p>
 			</div>
 		</div>
@@ -512,6 +518,45 @@
 		</div>
 		</div>
 
+		<div data-role='page' data-title='RETREAT Calculator' id="retreat">
+		<div class='outerWrapper'>
+			<h3>RETREAT Calculator</h3>
+
+			<div class='back'><a href='#toc' title='back' data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline">back</a></div>
+
+			<div class="input" id="inputRetreat">
+				<div data-role="fieldcontain">
+	    			<label for="afp">AFP closest to the time of transplantation (ng/mL)</label>
+	    			<input type="number" name="afp" id="afp" />
+				</div>	
+				<div data-role="fieldcontain">
+					<fieldset data-role='controlgroup' data-type='horizontal'>
+						<legend>Microvascular invasion on explant pathology?</legend>
+						<input type="radio" name="microInvasion" id='microInvasion-yes' value="yes">
+						<label for='microInvasion-yes'>Yes</label>
+						<input type="radio" name="microInvasion" id='microInvasion-no' value="no" checked>
+						<label for='microInvasion-no'>No</label>
+					</fieldset>
+				</div>
+				<div class="input" data-role="fieldcontain">
+	    			<label for="tumorNumber">Number of viable tumors on explant pathology</label>
+	    			<input type="number" name="tumorNumber" id="tumorNumber" />
+				</div>
+				<p><small><i>Do not count completely necrotic lesions</i></small></p>
+				<div class="input" data-role="fieldcontain">
+	    			<label for="largestTumor">Diameter of the largest viable tumor on explant pathology (cm)</label>
+	    			<input type="number" name="largestTumor" id="largestTumor" />
+				</div>
+				<p><small><i>Only measure the diameter of viable tumor</i></small></p>
+			</div>
+
+			<button id="buttonRetreat">Calculate RETREAT</button>
+			<div id="outputRetreat">
+				<p id="resultRetreat"></p>
+				<p id="recRetreat"></p>
+			</div>
+		</div>
+		</div>
 
 	</body>
 </html>

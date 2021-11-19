@@ -128,6 +128,11 @@ div.ui-field-contain {
 	margin: .5em 2% 0 0;
 }
 
+#retreat .ui-field-contain > label,
+#retreat .ui-field-contain .ui-controlgroup-label {
+	width: 65%;
+}
+
 .ui-field-contain > label ~ [class*="ui-"],
 .ui-field-contain .ui-controlgroup-controls {
 	float: left;
@@ -135,6 +140,11 @@ div.ui-field-contain {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+}
+
+#retreat .ui-field-contain > label ~ [class*="ui-"],
+#retreat .ui-field-contain .ui-controlgroup-controls {
+	width: 33%;
 }
 
 #pcrs .ui-field-contain .ui-controlgroup-label {

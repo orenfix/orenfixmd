@@ -384,6 +384,77 @@ $(document).ready(function() {
 		$("#resultPcrs").html("<b>PCRS: </b>" + pcrs);
 		$("#riskPcrs").html("<b>Risk of HCC recurrence: </b>" + riskPcrs);
 	});
+
+//RETREAT CALCULATOR	
+	$("#buttonRetreat").click(function() {
+		$("#outputRetreat").addClass("border");
+		var afp = parseFloat($("#afp").val());
+		var microInvasion = $("input[name='microInvasion']:checked").val();
+		var tumorNumber = parseFloat($("#tumorNumber").val());
+		var largestTumor = parseFloat($("#largestTumor").val());
+		var retreat;
+		var surveillance;
+
+		if (tumorNumber==0 && isNaN(largestTumor)) {
+			largestTumor=0;
+		}
+
+		var tumorSum = tumorNumber+largestTumor;
+
+		if (afp<21) {
+			retreat=0;
+			} else if (afp<100) {
+			retreat=1;
+			} else if (afp<1000) {
+			retreat=2;
+			} else {
+			retreat=3;
+		}
+		if (microInvasion=="no") {
+			retreat+=0;
+			} else {
+			retreat+=2;
+		}
+		if (tumorSum==0) {
+			retreat+=0;
+			} else if (tumorSum<5) {
+			retreat+=1;
+			} else if (tumorSum<10) {
+			retreat+=2;
+			} else {
+			retreat+=3;
+		}
+
+		if (retreat==0) {
+			surveillance="No HCC surveillance required.";
+			} else if (retreat<4) {
+			surveillance="MRI abdomen with and without contrast, CT chest without contrast, and serum AFP every 6 months for 3 years, followed by AFP alone every 6 months for 5 years."
+			} else if (retreat<5) {
+			surveillance="MRI abdomen with and without contrast, CT chest without contrast, and serum AFP every 6 months for 5 years.<br/><br/>Consider adding mTOR inhibitor to immunosuppression regimen."
+			} else {
+			surveillance="MRI abdomen with and without contrast, CT chest without contrast, and serum AFP every 3 months for 2 years, followed by every 6 months for 5 years.<br/><br/>Consider adding mTOR inhibitor to immunosuppression regimen."
+		}
+
+		if (tumorNumber==0 && largestTumor>0) {
+			$("#inputRetreat input[type='number']").css({"border":"none"});
+			$("#resultRetreat").html("You can't measure a tumor that isn't there!").css({"color":"red"});
+			$("#recRetreat").html("");
+			$("#outputRetreat").removeClass("border");
+			$("#largestTumor").css({"border":"2px solid red"});
+			} else if (isNaN(afp) || isNaN(tumorNumber) || (afp<0) || (tumorNumber<0) || (tumorNumber>0 && isNaN(largestTumor)) || (largestTumor<0)) {
+				$("#inputRetreat input[type='number']").css({"border":"none"});
+				$("#resultRetreat").html("Enter a value").css({"color":"red"});
+				$("#recRetreat").html("");
+				$("#outputRetreat").removeClass("border");
+				if (isNaN(afp) || (afp<0)) { $("#afp").css({"border":"2px solid red"}); }
+				if (isNaN(tumorNumber) || (tumorNumber<0)) { $("#tumorNumber").css({"border":"2px solid red"}); }
+				if ((tumorNumber>0 && isNaN(largestTumor)) || (largestTumor<0)) { $("#largestTumor").css({"border":"2px solid red"}); }
+				} else { 
+					$("#inputRetreat input[type='number']").css({"border":"none"});
+					$("#resultRetreat").html("<b>RETREAT score: </b>" + retreat).css({"color":"black"});
+					$("#recRetreat").html("<br/><b>Surveillance recommendation: </b><br>" + surveillance).css({"color":"black"});
+				}
+	});
 	
 
 //TRANSFER VALUES FROM ONE CALCULATOR TO ANOTHER
