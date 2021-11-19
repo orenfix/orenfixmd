@@ -130,7 +130,7 @@ div.ui-field-contain {
 
 #retreat .ui-field-contain > label,
 #retreat .ui-field-contain .ui-controlgroup-label {
-	width: 65%;
+	width: 60%;
 }
 
 .ui-field-contain > label ~ [class*="ui-"],
@@ -144,7 +144,7 @@ div.ui-field-contain {
 
 #retreat .ui-field-contain > label ~ [class*="ui-"],
 #retreat .ui-field-contain .ui-controlgroup-controls {
-	width: 33%;
+	width: 35%;
 }
 
 #pcrs .ui-field-contain .ui-controlgroup-label {
@@ -154,5 +154,11 @@ div.ui-field-contain {
 #pcrs .ui-field-contain .ui-controlgroup-controls {
 	float: right;
 	width: auto;
+}
+
+.clearfix::after {
+ 	content: "";
+ 	clear: both;
+ 	display: table;
 }
 
