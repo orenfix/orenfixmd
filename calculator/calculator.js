@@ -428,11 +428,11 @@ $(document).ready(function() {
 		if (retreat==0) {
 			surveillance="No HCC surveillance required.";
 			} else if (retreat<4) {
-			surveillance="MRI abdomen with and without contrast, CT chest without contrast, and serum AFP every 6 months for 3 years, followed by AFP alone every 6 months for 5 years."
+			surveillance="MRI abdomen with and without contrast, CT chest without contrast, and serum AFP every 6 months for 3 years, followed by AFP alone every 6 months for 5 years"
 			} else if (retreat<5) {
-			surveillance="MRI abdomen with and without contrast, CT chest without contrast, and serum AFP every 6 months for 5 years.<br/><br/>Consider adding mTOR inhibitor to immunosuppression regimen."
+			surveillance="MRI abdomen with and without contrast, CT chest without contrast, and serum AFP every 6 months for 5 years<br/><br/>Consider adding mTOR inhibitor to immunosuppression regimen"
 			} else {
-			surveillance="MRI abdomen with and without contrast, CT chest without contrast, and serum AFP every 3 months for 2 years, followed by every 6 months for 5 years.<br/><br/>Consider adding mTOR inhibitor to immunosuppression regimen."
+			surveillance="MRI abdomen with and without contrast, CT chest without contrast, and serum AFP every 3 months for 2 years, followed by every 6 months for 5 years<br/><br/>Consider adding mTOR inhibitor to immunosuppression regimen"
 		}
 
 		if (tumorNumber==0 && largestTumor>0) {
@@ -441,14 +441,14 @@ $(document).ready(function() {
 			$("#recRetreat").html("");
 			$("#outputRetreat").removeClass("border");
 			$("#largestTumor").css({"border":"2px solid red"});
-			} else if (isNaN(afp) || isNaN(tumorNumber) || (afp<0) || (tumorNumber<0) || (tumorNumber>0 && isNaN(largestTumor)) || (largestTumor<0)) {
+			} else if (isNaN(afp) || isNaN(tumorNumber) || (afp<0) || (tumorNumber<0) || (tumorNumber>0 && isNaN(largestTumor)) || (tumorNumber>0 && largestTumor==0) || (largestTumor<0)) {
 				$("#inputRetreat input[type='number']").css({"border":"none"});
 				$("#resultRetreat").html("Enter a value").css({"color":"red"});
 				$("#recRetreat").html("");
 				$("#outputRetreat").removeClass("border");
 				if (isNaN(afp) || (afp<0)) { $("#afp").css({"border":"2px solid red"}); }
 				if (isNaN(tumorNumber) || (tumorNumber<0)) { $("#tumorNumber").css({"border":"2px solid red"}); }
-				if ((tumorNumber>0 && isNaN(largestTumor)) || (largestTumor<0)) { $("#largestTumor").css({"border":"2px solid red"}); }
+				if ((tumorNumber>0 && isNaN(largestTumor)) || (tumorNumber>0 && largestTumor==0) || (largestTumor<0)) { $("#largestTumor").css({"border":"2px solid red"}); }
 				} else { 
 					$("#inputRetreat input[type='number']").css({"border":"none"});
 					$("#resultRetreat").html("<b>RETREAT score: </b>" + retreat).css({"color":"black"});
