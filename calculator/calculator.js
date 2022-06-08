@@ -428,11 +428,11 @@ $(document).ready(function() {
 		if (retreat==0) {
 			surveillance="No HCC surveillance required.";
 			} else if (retreat<4) {
-			surveillance="MRI abdomen with and without contrast, CT chest without contrast, and serum AFP every 6 months for 3 years, followed by AFP alone every 6 months for 5 years"
+			surveillance="MRI abdomen with contrast, non-contrast CT chest, and serum AFP every 6 months for 3 years, then AFP alone every 6 months until 5 years post-transplantation"
 			} else if (retreat<5) {
-			surveillance="MRI abdomen with and without contrast, CT chest without contrast, and serum AFP every 6 months for 5 years<br/><br/>Consider adding mTOR inhibitor to immunosuppression regimen"
+			surveillance="MRI abdomen with contrast, non-contrast CT chest, and serum AFP every 6 months for 5 years<br/><br/>Consider adding mTOR inhibitor to immunosuppression regimen"
 			} else {
-			surveillance="MRI abdomen with and without contrast, CT chest without contrast, and serum AFP every 3 months for 2 years, followed by every 6 months for 5 years<br/><br/>Consider adding mTOR inhibitor to immunosuppression regimen"
+			surveillance="MRI abdomen with contrast, non-contrast CT chest, and serum AFP every 3 months for 2 years, then every 6 months until 5 years post-transplantation<br/><br/>Consider adding mTOR inhibitor to immunosuppression regimen"
 		}
 
 		if (tumorNumber==0 && largestTumor>0) {
