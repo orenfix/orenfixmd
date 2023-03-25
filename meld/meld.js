@@ -54,8 +54,8 @@ $(document).ready(function() {
 
 		var meld3 = (1.33*ifFemale + 4.56*Math.log(bili) + 0.82*(137-sodium) - 0.24*(137-sodium)*Math.log(bili) + 9.09*Math.log(inr) + 11.14*Math.log(creatinine3) + 1.85*(3.5-albumin) - 1.83*(3.5-albumin)*Math.log(creatinine3) + 6).toFixed(0);
 
-		var Meld3woAlb = (1.33*ifFemale + 4.56*Math.log(bili) + 0.82*(137-sodium) - 0.24*(137-sodium)*Math.log(bili) + 9.09*Math.log(inr) + 11.14*Math.log(creatinine3) + 6).toFixed(0);
-
+/*		var Meld3woAlb = (1.33*ifFemale + 4.56*Math.log(bili) + 0.82*(137-sodium) - 0.24*(137-sodium)*Math.log(bili) + 9.09*Math.log(inr) + 11.14*Math.log(creatinine3) + 6).toFixed(0);
+*/
 /*
 		var probability;
 		if (meldna>31) {
