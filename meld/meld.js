@@ -77,7 +77,7 @@ $(document).ready(function() {
 			}
 */
 		$("#resultMeld3").html(meld3);
-		$("#resultMeld3woAlb").html(Meld3woAlb);
+/*		$("#resultMeld3woAlb").html(Meld3woAlb);  */
 		$("#resultMeld").html(meld);
 		$("#resultMeldNa").html(meldna);
 /*		$("#probability").html(probability+"&#37;"); */
