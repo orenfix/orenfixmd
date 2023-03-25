@@ -160,7 +160,7 @@ div#outputContainer {
 div#outputMeld, div#probabilityBox {
 	margin: .6em auto;
 	padding: .6em .8em;
-	width: 14em;
+	width: 7em;
 	border: 1px solid #3baae3;
 	border-radius: 6px;
 	line-height: 1.5em;
