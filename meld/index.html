@@ -32,7 +32,7 @@
 	<body>
 	<div id="mainContent">
 			<h1>MELD 3.0 Calculator</h1>
-			<h2>(Includes comparison with MELD-Na and MELD)</h2>
+			<h2>To be implemented by UNOS on 7/13/2023</h2>
 			<div id="inputMeld">
 				<div class="slider">
 					<label for="inr">INR</label>
@@ -64,21 +64,23 @@
 					<p class="small">Albumin range for calculator is 1.5-3.5 g/dL</p>
 				</div>				
 				<div class="slider yesno">
-					<label for="dialysis" class="flipswitchLabel">Dialysis?</label>
+					<label for="dialysis" class="flipswitchLabel">Dialysis</label>
 					<input id="dialysis" type="checkbox" data-role="flipswitch" data-on-text="Yes" data-off-text="No" data-mini="true">
 					<p class="small">2 or more dialysis treatments within the prior week or 24 hours of CVVHD within the prior week</p>
 					<p class="small">Default creatinine for dialysis = 3 mg/dL (for MELD 3.0) or 4 mg/dL (for all other scores)</p>
 				</div>
 				<div class="slider sex">
-					<label for="sex" class="flipswitchLabel">Sex?</label>
+					<label for="sex" class="flipswitchLabel">Sex</label>
 					<input id="sex" type="checkbox" data-role="flipswitch" data-on-text="Female" data-off-text="Male" data-mini="true">
+					<p class="small">For the purposes of MELD calculation (may be different from birth sex)</p>
 				</div>
 			</div>
 			<div id="outputContainer">
 				<div id="outputMeld">
-					<p>MELD: <span id="resultMeld" class="result"></span></small></p>
-					<p>MELD-Na: <span id="resultMeldNa" class="result"></span></small></p>
 					<p>MELD 3.0: <span id="resultMeld3" class="result"></span></p>
+					<p>MELD-Na: <span id="resultMeldNa" class="result"></span></small></p>
+					<p>MELD: <span id="resultMeld" class="result"></span></small></p>
+					
 <!--					<p>MELD 3.0 without albumin: <span id="resultMeld3woAlb" class="result"></span></p>   -->
 				</div>
 <!--				<div id="probabilityBox">
@@ -89,9 +91,12 @@
 			</div>
 			<footer>
 				<p>&copy; <script>document.write(new Date().getFullYear());</script>. All rights reserved.</p> 
-				<p>Designed and developed by <a href="https://orenfixmd.com" target="_blank">Oren Fix, MD</a></p>
-				<p>Concept by Scott Biggins, MD</p>
-				<p><a href="https://pubmed.ncbi.nlm.nih.gov/34481845/" target="_blank">Kim WR et al. MELD 3.0: The Model for End-stage Liver Disease Updated for the Modern Era. Gastroenterology 2021</a></p>
+				<p>Designed and developed by <a href="https://orenfixmd.com" target="_blank">Oren Fix, MD, MSc</a></p>
+				<p>Concept by <a href="https://gastro.uw.edu/faculty/scott-w-biggins-md-mas" target="_blank">Scott Biggins, MD, MAS</a></p>
+				<br>
+				MELD 3.0 references:
+				<p>&centerdot; <a href="https://pubmed.ncbi.nlm.nih.gov/34481845/" target="_blank">Kim WR et al. MELD 3.0: The Model for End-stage Liver Disease Updated for the Modern Era. Gastroenterology 2021</a></p>
+				<p>&centerdot; <a href="https://optn.transplant.hrsa.gov/media/3idbp5vq/policy-guid-change_impr-liv-alloc-meld-peld-sta-1a-sta-1b_liv.pdf" target="_blank">OPTN policy about implementing MELD 3.0</a></p>
 			</footer>
 		</div>
 	</body>

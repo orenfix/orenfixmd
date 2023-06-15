@@ -37,7 +37,8 @@ h1 {
 	font-size: 4rem;
 	font-weight: bold;
 	text-align: center;
-	color: rgb(255,144,8);
+	color: rgb(255,144,8); /*orange*/
+	color: rgb(80,210,255); /*blue*/
 }
 
 @media only screen and (max-width: 800px) {
@@ -121,13 +122,19 @@ a, a:visited {
 	margin: 0 auto .8rem auto;
 	border-radius: 4px;
 	color: white;
-	background-color: rgb(255,144,8);
+	background-color: rgb(255,144,8); /*orange*/
+	background-color: rgb(80,210,255); /*blue*/
 	text-decoration: none;
+}
+
+.large_font {
+	font-size: 1.7rem;
 }
 
 a:hover, a:active {
 	color: white;
-	background-color: rgb(226,87,32);
+	background-color: rgb(226,87,32); /*orange*/
+	background-color: rgb(0,181,255); /*blue*/
 }
 
 footer {
