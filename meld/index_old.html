@@ -34,10 +34,15 @@
 			<h1>MELD 3.0 Calculator</h1>
 			<h2>Implemented by UNOS on 7/13/2023</h2>
 			<div id="inputMeld">
-				<div class="slider sex">
-					<label for="sex" class="flipswitchLabel">Sex</label>
-					<input id="sex" type="checkbox" data-role="flipswitch" data-on-text="Female" data-off-text="Male" data-mini="true">
-					<p class="small">For the purposes of MELD calculation (may be different from birth sex)</p>
+				<div class="slider">
+					<label for="inr">INR</label>
+					<input type="range" id="inr" min="1" max="15" value="1" step=".1" data-highlight="true">
+					<button id="inrButtonMinus">-</button><button id="inrButtonPlus" value="+">+</button>
+				</div>
+				<div class="slider">
+					<label for="bili">Bilirubin (mg/dL)</label>
+					<input type="range" id="bili" min="1" max="50" value="1" step=".1" data-highlight="true">
+					<button id="biliButtonMinus">-</button><button id="biliButtonPlus">+</button>
 				</div>
 				<div class="slider">
 					<label for="creatinine">Creatinine (mg/dL)</label>
@@ -46,12 +51,6 @@
 					<p class="small">Maximum creatinine = 3 mg/dL (for MELD 3.0) or 4 mg/dL (for all other scores)</p>
 					<p class="small">Values of bilirubin, creatinine and INR default to minimum of 1</p>
 				</div>
-				<div class="slider yesno">
-					<label for="dialysis" class="flipswitchLabel">Dialysis</label>
-					<input id="dialysis" type="checkbox" data-role="flipswitch" data-on-text="Yes" data-off-text="No" data-mini="true">
-					<p class="small">2 or more dialysis treatments within the prior week or 24 hours of CVVHD within the prior week</p>
-					<p class="small">Default creatinine for dialysis = 3 mg/dL (for MELD 3.0) or 4 mg/dL (for all other scores)</p>
-				</div>
 				<div class="slider">
 					<label for="sodium">Sodium (mmol/L)</label>
 					<input type="range" id="sodium" value="137" min="125" max="137" step="1" data-highlight="true">
@@ -59,27 +58,28 @@
 					<p class="small">Sodium range for calculator is 125-137 mmol/L</p>
 				</div>	
 				<div class="slider">
-					<label for="bili">Bilirubin (mg/dL)</label>
-					<input type="range" id="bili" min="1" max="50" value="1" step=".1" data-highlight="true">
-					<button id="biliButtonMinus">-</button><button id="biliButtonPlus">+</button>
-				</div>
-				<div class="slider">
 					<label for="albumin">Albumin (g/dL)</label>
 					<input type="range" id="albumin" value="3.5" min="1.5" max="3.5" step=".1" data-highlight="true">
 					<button id="albuminButtonMinus">-</button><button id="albuminButtonPlus">+</button>
 					<p class="small">Albumin range for calculator is 1.5-3.5 g/dL</p>
-				</div>	
-				<div class="slider">
-					<label for="inr">INR</label>
-					<input type="range" id="inr" min="1" max="15" value="1" step=".1" data-highlight="true">
-					<button id="inrButtonMinus">-</button><button id="inrButtonPlus" value="+">+</button>
-				</div>			
+				</div>				
+				<div class="slider yesno">
+					<label for="dialysis" class="flipswitchLabel">Dialysis</label>
+					<input id="dialysis" type="checkbox" data-role="flipswitch" data-on-text="Yes" data-off-text="No" data-mini="true">
+					<p class="small">2 or more dialysis treatments within the prior week or 24 hours of CVVHD within the prior week</p>
+					<p class="small">Default creatinine for dialysis = 3 mg/dL (for MELD 3.0) or 4 mg/dL (for all other scores)</p>
+				</div>
+				<div class="slider sex">
+					<label for="sex" class="flipswitchLabel">Sex</label>
+					<input id="sex" type="checkbox" data-role="flipswitch" data-on-text="Female" data-off-text="Male" data-mini="true">
+					<p class="small">For the purposes of MELD calculation (may be different from birth sex)</p>
+				</div>
 			</div>
 			<div id="outputContainer">
 				<div id="outputMeld">
 					<p>MELD 3.0: <span id="resultMeld3" class="result"></span></p>
-					<p><small>MELD-Na: <span id="resultMeldNa" class="result"></span></small></p>
-					<p><small>MELD: <span id="resultMeld" class="result"></span></small></p>
+					<p>MELD-Na: <span id="resultMeldNa" class="result"></span></small></p>
+					<p>MELD: <span id="resultMeld" class="result"></span></small></p>
 					
 <!--					<p>MELD 3.0 without albumin: <span id="resultMeld3woAlb" class="result"></span></p>   -->
 				</div>

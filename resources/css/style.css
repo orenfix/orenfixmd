@@ -41,6 +41,7 @@ h1 {
 	color: rgb(80,210,255); /*blue*/
 }
 
+
 @media only screen and (max-width: 800px) {
 	.banner {
 		flex-direction: column;
@@ -129,6 +130,10 @@ a, a:visited {
 
 .large_font {
 	font-size: 1.7rem;
+}
+
+.small {
+	font-size: 1.2rem;
 }
 
 a:hover, a:active {
