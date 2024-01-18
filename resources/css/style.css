@@ -75,8 +75,8 @@ h3 {
 }
 
 .list {
-/*	width: 40%; For 2 columns*/
-	width: 30%;
+	width: 40%; /* For 2 columns */
+/*	width: 30%;  For 3 columns */
 	text-align: center;
 }
 

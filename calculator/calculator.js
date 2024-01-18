@@ -281,8 +281,8 @@ $(document).ready(function() {
 		var fib4 = ((ageFib4*astFib4)/(pltFib4*(Math.pow(altFib4,.5)))).toFixed(2)
 
 		var fib4Risk = "";
-		if (fib4 <1.45) { fib4Risk = "No or moderate fibrosis";
-			} else if (fib4 >3.25) { 
+		if (fib4 <1.3) { fib4Risk = "No or moderate fibrosis";
+			} else if (fib4 >2.67) { 
 				fib4Risk = "Extensive fibrosis or cirrhosis";
 			} else fib4Risk = "Indeterminate risk of fibrosis/cirrhosis"; 
 
