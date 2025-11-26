@@ -1,19 +1,6 @@
 $(document).ready(function() {
-	var tabs = $("#inputMeld input");
-	var tabslength = tabs.length;
-	for (var i=1;i<tabslength;i++) {
-		tabs.attr("tabIndex",i);
-	}
-	
-	tabs.keyup(function(e) {
-    	if(e.keyCode == 13) {
-    		e.preventDefault();
-    		var tabindex = $(this).attr("tabindex");
-    		tabindex++;
-	  		$("[tabindex=" + tabindex + "]").focus();
-	  		return false;
-    	}
-	});
+
+$(".ui-slider-handle, .ui-btn").attr("tabindex", "-1");
 
 	function calculateMeld() {
 		var inr = $("#inr").val();
@@ -54,33 +41,9 @@ $(document).ready(function() {
 
 		var meld3 = (1.33*ifFemale + 4.56*Math.log(bili) + 0.82*(137-sodium) - 0.24*(137-sodium)*Math.log(bili) + 9.09*Math.log(inr) + 11.14*Math.log(creatinine3) + 1.85*(3.5-albumin) - 1.83*(3.5-albumin)*Math.log(creatinine3) + 6).toFixed(0);
 
-/*		var Meld3woAlb = (1.33*ifFemale + 4.56*Math.log(bili) + 0.82*(137-sodium) - 0.24*(137-sodium)*Math.log(bili) + 9.09*Math.log(inr) + 11.14*Math.log(creatinine3) + 6).toFixed(0);
-*/
-/*
-		var probability;
-		if (meldna>31) {
-			probability = 81;
-			} else if (meldna>26) {
-				probability = 27;
-			} else if (meldna>22) {
-				probability = 13;
-			} else if (meldna>20) {
-				probability = 7;
-			} else if (meldna>18) {
-				probability = 4;
-			} else if (meldna>16) {
-				probability = 3;
-			} else if (meldna>14) {
-				probability = 2;
-			} else {
-				probability = 1;
-			}
-*/
 		$("#resultMeld3").html(meld3);
-/*		$("#resultMeld3woAlb").html(Meld3woAlb);  */
 		$("#resultMeld").html(meld);
 		$("#resultMeldNa").html(meldna);
-/*		$("#probability").html(probability+"&#37;"); */
 	};
 
 	calculateMeld();

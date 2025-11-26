@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Dosis:400,700');
+/*@import url('https://fonts.googleapis.com/css?family=Dosis:400,700'); */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 html {
 	font-size: 16px;
@@ -9,7 +10,7 @@ body, .banner, footer {
 }
 
 body {
-	font-family: 'Dosis', Helvetica, sans-serif;
+	font-family: 'Nunito Sans', Helvetica, sans-serif;
 	color: rgb(90,90,90);
 }
 

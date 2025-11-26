@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+/*@import url('https://fonts.googleapis.com/css?family=Roboto:400,700'); */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
 
 html, body, h1, h2, h3, label, input, small, p, footer, a {
 	margin: 0;
@@ -10,7 +12,7 @@ body {
 }
 
 body, input.ui-slider-input {
-    font-family: 'Roboto', Helvetica, sans-serif;
+    font-family: 'Nunito Sans', Helvetica, sans-serif;
     font-weight: 400;
 }
 
