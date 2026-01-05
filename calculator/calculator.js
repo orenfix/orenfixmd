@@ -933,6 +933,12 @@ $(document).ready(function() {
 		$("#afpLad").val(afpGalad);
 	});
 
+		$("#afpLad").blur(function() {
+		var afpLad = $("#afpLad").val();
+		$("#afpRetreat").val(afpLad);
+		$("#afpGalad").val(afpLad);
+	});
+
 	//AFP-L3%
 	//From GALAD, LAD
 	$("#afpl3Galad").blur(function() {
