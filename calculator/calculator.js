@@ -843,6 +843,7 @@ $(document).ready(function() {
 		$("#ageNafld").val(ageGalad);
 	});
 
+/*
 	//SEX
 	//From AUDIT-C, GALAD
 	$('input[name="audit-c-sex"]').on('change', function() {
@@ -864,7 +865,8 @@ $(document).ready(function() {
 			$('#audit-c-sex').controlgroup('refresh');
 		}
 	});
-
+*/
+	
 	//AST
 	//From APRI, Fib4, NFS
 	$("#astApri").blur(function() {
