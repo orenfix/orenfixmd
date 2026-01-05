@@ -44,6 +44,7 @@ body, h1, h2, h3, small, p, footer {
 
 .header-toc {
 	padding: 1em 0 0 1em;
+	max-width: 360px;
 }
 
 .back {
@@ -90,7 +91,6 @@ h5 {
 	font-weight: normal;
 	margin: .5em;
 	padding: .5em;
-	max-width: 360px;
 }
 
 .ui-page-theme-a a {
@@ -112,10 +112,6 @@ small {
 	padding: .6em .8em;
 	border-radius: 10px;
 	line-height: 1.5em;
-}
-
-#toc .ui-btn {
-	padding: 0.7em 1em;
 }
 
 button.ui-btn {
