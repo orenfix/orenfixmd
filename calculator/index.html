@@ -1,14 +1,6 @@
 <!doctype html>
 <html lang='en-US'>
 	<head>
-		<!-- Google Tag Manager -->
-			<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-			})(window,document,'script','dataLayer','GTM-KMZZVB4');</script>
-		<!-- End Google Tag Manager -->
-
 		<meta charset='UTF-8'>
 		<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0" />
 		<meta name='apple-web-app-capable' content='yes' />
@@ -20,42 +12,42 @@
 		<link rel="stylesheet" href="greenTheme.min.css">
 		<link rel="stylesheet" href="jquery.mobile.icons-1.4.5.min.css">
 		<link rel="stylesheet" href="jquery.mobile.structure-1.4.5.min.css">
+		<link href="fontawesome.min.css" rel="stylesheet" />
+		<link href="solid.min.css" rel="stylesheet" />
 		<link rel="stylesheet" href="calculator.css">
 		<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
 		<script type="text/javascript" src="jquery.mobile-1.4.5.min.js"></script>
 		<script type="text/javascript" src="calculator.js"></script>
 		<script src='respond.min.js' type='text/javascript' ></script>
-		<title>Calculators</title>
+  		<title>Calculators</title>
 	</head>
 
 	<body data-theme='a'>
-		<!-- Google Tag Manager (noscript) -->
-			<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMZZVB4"
-			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-		<!-- End Google Tag Manager (noscript) -->
-		
 		<div data-role='page' data-title="Calculator" id='toc'>
-		<div class='outerWrapper-toc'>
-		<div class='header-toc'>
-			<h1>Hepatology Calculators</h1>
-			<h2>by Oren Fix, MD</h2>
-		</div>
-			<ul data-role="listview">
-				<li><a href="https://orenfixmd.com/meld" target="_blank" data-transition="slide">MELD 3.0 <i>(at orenfixmd.com)</i></a></li>
-<!--			<li><a href="#meld" data-transition="slide">MELD-Na</a></li> -->
-				<li><a href="#bmi" data-transition="slide">BMI</a></li>
-				<li><a href="#ctp" data-transition="slide">Child-Turcotte-Pugh</a></li>
-				<li><a href="#df" data-transition="slide">Maddrey's Discriminant Function</a></li>
-				<li><a href="#lille" data-transition="slide">Lille Model</a></li>
-				<li><a href="#apri" data-transition="slide">APRI</a></li>
-				<li><a href="#fib4" data-transition="slide">FIB4</a></li>
-				<li><a href="#nafld" data-transition="slide">NAFLD Fibrosis Score</a></li>
-				<li><a href="#nas" data-transition="slide">NAFLD Activity Score</a></li>
-<!--			<li><a href="#pcrs" data-transition="slide">PCRS Calculator</a></li> -->
-				<li><a href="#retreat" data-transition="slide">RETREAT</a></li>
-				<li><a href="#about" data-transition="slide">About</a></li>
-			</ul>
-		</div>
+			<div class='outerWrapper-toc'>
+				<div class='header-toc'>
+					<h1>Hepatology Calculators</h1>
+					<h2>by <a href="https://orenfixmd.com" target="_blank">Oren Fix, MD</a></h2>
+					<h5 class='announcement'><b>NEW! AUDIT-C, REVERSE BMI, REVERSE LILLE, GALAD, AND LAD CALCULATORS</b></h5>
+				</div>
+				<ul data-role="listview">
+					<li><a href="#meld" data-transition="slide">MELD 3.0</a></li>
+					<li><a href="#bmi" data-transition="slide">BMI &nbsp;&nbsp;&nbsp;<b>NEW!</b></a></li>
+					<li><a href="#ctp" data-transition="slide">Child-Turcotte-Pugh</a></li>
+					<li><a href="#audit" data-transition="slide">AUDIT-C &nbsp;&nbsp;&nbsp;<b>NEW!</b></a></li>
+					<li><a href="#df" data-transition="slide">Maddrey's Discriminant Function</a></li>
+					<li><a href="#lille" data-transition="slide">Lille Model &nbsp;&nbsp;&nbsp;<b>NEW!</b></a></li>
+					<li><a href="#retreat" data-transition="slide">RETREAT</a></li>
+					<li><a href="#galad" data-transition="slide">GALAD&nbsp;&nbsp;&nbsp;<b>NEW!</b></a></li>
+					<li><a href="#lad" data-transition="slide">LAD&nbsp;&nbsp;&nbsp;<b>NEW!</b></a></li>
+					<li><a href="#fib4" data-transition="slide">FIB4</a></li>
+					<li><a href="#apri" data-transition="slide">APRI</a></li>
+										<li><a href="#nafld" data-transition="slide">NAFLD Fibrosis Score</a></li>
+					<li><a href="#nas" data-transition="slide">NAFLD Activity Score</a></li>
+
+					<li><a href="#about" data-transition="slide">About</a></li>
+				</ul>
+			</div>
 		</div>
 
 		<div data-role='page' data-title="Hepatology Calculators | About" id='about'>
@@ -64,232 +56,320 @@
 
 				<div class='back'><a href='#toc' title='back' data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline">back</a></div>
 
-				<p>Oren Fix is a transplant hepatologist and clinical informaticist in Chapel Hill, NC.</p>
-				<h4>Tips:</h4>
-				<p>Values entered in a calculator are copied into corresponding values in other calculators.</p>
-				<p>The result of the BMI calculator is copied into the BMI field of the NAFLD Fibrosis Score calculator.</p>
+				<p>Oren Fix, MD is the Medical Director of Liver Transplantation and a Lead Informatics Physician at the University of North Carolina in Chapel Hill, NC.</p>
+				<p><b>Tip:</b> Values entered in a calculator are copied into corresponding values in other calculators.</p>				
+<!--
+
 				<h4>MELD 3.0:</h4>
-				<a href="https://pubmed.ncbi.nlm.nih.gov/37271968/" target="_blank">Mehta S et al. Policy Corner: Liver transplant MELD 3.0. Liver Transplantation 2023. PMID 37271968</a>
-				<a href="https://pubmed.ncbi.nlm.nih.gov/34481845/" target="_blank">Kim WR et al. MELD 3.0: The Model for End-stage Liver Disease Updated for the Modern Era. Gastroenterology 2021. PMID 34481845</a>
-				<a href="https://optn.transplant.hrsa.gov/policies-bylaws/public-comment/improving-liver-allocation-meld-peld-status-1a-and-status-1b/" target="_blank">OPTN MELD 3.0 policy effective 7/13/2023</a>
-		<!--	<h4>MELD-Na:</h4>
-				<a href="https://www.ncbi.nlm.nih.gov/pubmed/18768945" target="_blank">Kim WR, Biggins SW, Kremers WK, et al. Hyponatremia and mortality among patients on the liver-transplant waiting list. N Engl J Med 2008;359(10):1018-26. PMID: 18768945</a>
-				<a href="https://www.ncbi.nlm.nih.gov/pubmed/25504743" target="_blank">Sharma P, Schaubel DE, Goodrich NP, et al. Serum sodium and survival benefit of liver transplantation. Liver Transpl 2015;21(3):308-13. PMID: 25504743</a>
-				<a href="https://www.ncbi.nlm.nih.gov/pubmed/25641769" target="_blank">Biggins SW. Use of serum sodium for liver transplant graft allocation: a decade in the making, now is it ready for primetime? Liver Transpl 2015;21(3):279-81. PMID: 25641769</a>  -->
+				<ul>
+					<li>Mehta S et al. Policy Corner: Liver transplant MELD 3.0. Liver Transplantation 2023. PMID 37271968 <a href="https://pubmed.ncbi.nlm.nih.gov/37271968/" target="_blank">&nbsp;<i class="fa-solid fa-up-right-from-square"></i></a></li>
+					<li>Kim WR et al. MELD 3.0: The Model for End-stage Liver Disease Updated for the Modern Era. Gastroenterology 2021. PMID 34481845 <a href="https://pubmed.ncbi.nlm.nih.gov/34481845/" target="_blank">&nbsp;<i class="fa-solid fa-up-right-from-square"></i></a></li>
+					<li>OPTN MELD 3.0 policy <a href="https://optn.transplant.hrsa.gov/policies-bylaws/public-comment/improving-liver-allocation-meld-peld-status-1a-and-status-1b/" target="_blank">&nbsp;<i class="fa-solid fa-up-right-from-square"></i></a></li>
+				</ul>
 				<h4>BMI:</h4>
-				<a href="https://www.ncbi.nlm.nih.gov/pubmed/4650929" target="_blank">Keys A, Fidanza F, Karvonen MJ, et al. Indices of relative weight and obesity. J Chronic Dis 1972;25(6):329-43. PMID: 4650929</a>
+				<ul>
+					<li>Keys A, Fidanza F, Karvonen MJ, et al. Indices of relative weight and obesity. J Chronic Dis 1972;25(6):329-43. PMID: 4650929 <a href="https://	www.ncbi.nlm.nih.gov/pubmed/4650929" target="_blank">&nbsp;<i class="fa-solid fa-up-right-from-square"></i></a></li>
+				</ul>
 				<h4>Child-Turcotte-Pugh:</h4>
-				<a href="https://www.ncbi.nlm.nih.gov/pubmed/4950264" target="_blank">Child CG, Turcotte JG. Surgery and portal hypertension. In: The liver and portal hypertension. Edited by CG Child. Philadelphia: Saunders 1964:50-64. PMID: 4950264</a>
-				<a href="https://www.ncbi.nlm.nih.gov/pubmed/4541913" target="_blank">Pugh RN, Murray-Lyon IM, Dawson JL, et al. Transection of the oesophagus for bleeding oesophageal varices. Br J Surg 1973;60(8):646-9. PMID: 4541913</a>
+				<ul>
+					<li>Child CG, Turcotte JG. Surgery and portal hypertension. In: The liver and portal hypertension. Edited by CG Child. Philadelphia: Saunders 1964:50-64. PMID: 4950264 <a href="https://www.ncbi.nlm.nih.gov/pubmed/4950264" target="_blank">&nbsp;<i class="fa-solid fa-up-right-from-square"></i></a></li>
+					<li>Pugh RN, Murray-Lyon IM, Dawson JL, et al. Transection of the oesophagus for bleeding oesophageal varices. Br J Surg 1973;60(8):646-9. PMID: 4541913 <a href="https://www.ncbi.nlm.nih.gov/pubmed/4541913" target="_blank">&nbsp;<i class="fa-solid fa-up-right-from-square"></i></a></li>
+				</ul>
+				<h4>AUDIT-C:</h4>
+				<ul>
+					<li>Bush K, Kivlahan DR, McDonell MB, et al. The AUDIT alcohol consumption questions (AUDIT-C): an effective brief screening test for problem drinking. Ambulatory Care Quality Improvement Project (ACQUIP). Alcohol Use Disorders Identification Test. Arch Intern Med 1998;158(16):1789-95. PMID: 9738608 <a href="https://pubmed.ncbi.nlm.nih.gov/9738608/" target="_blank">&nbsp;<i class="fa-solid fa-up-right-from-square"></i></a></li>
+					<li>USPSTF. Screening and behavioral counseling interventions to reduce unhealthy alcohol use in adolescents and adults: US Preventive Services Task Force recommendation statement. JAMA 2018;320:1899-1909. PMID: 30422199 <a href="https://www.ncbi.nlm.nih.gov/pubmed/30422199" target="_blank">&nbsp;<i class="fa-solid fa-up-right-from-square"></i></a></li>
+				</ul>
 				<h4>Maddrey's Discriminant Function:</h4>
-				<a href="https://www.ncbi.nlm.nih.gov/pubmed/352788" target="_blank">Maddrey WC, Boitnott JK, Bedine MS, et al. Corticosteroid therapy of alcoholic hepatitis. Gastroenterology 1978;75(2):193-9. PMID: 352788</a>
+				<ul>
+					<li>Maddrey WC, Boitnott JK, Bedine MS, et al. Corticosteroid therapy of alcoholic hepatitis. Gastroenterology 1978;75(2):193-9. PMID: 352788 <a href="https://www.ncbi.nlm.nih.gov/pubmed/352788" target="_blank">&nbsp;<i class="fa-solid fa-up-right-from-square"></i></a></li>
+				</ul>
 				<h4>Lille Model:</h4>
-				<a href="https://www.ncbi.nlm.nih.gov/pubmed/17518367" target="_blank">Louvet A, Naveau S, Abdelnour M, et al. The Lille model: a new tool for therapeutic strategy in patients with severe alcoholic hepatitis treated with steroids. Hepatology 2007;45(6):1348-54. PMID: 17518367</a>
+				<ul>
+					<li>Louvet A, Naveau S, Abdelnour M, et al. The Lille model: a new tool for therapeutic strategy in patients with severe alcoholic hepatitis treated with steroids. Hepatology 2007;45(6):1348-54. PMID: 17518367 <a href="https://www.ncbi.nlm.nih.gov/pubmed/17518367" target="_blank">&nbsp;<i class="fa-solid fa-up-right-from-square"></i></a></li>
+				</ul>
 				<h4>APRI (AST-Platelet Ratio Index):</h4>
-				<a href="https://www.ncbi.nlm.nih.gov/pubmed/12883497" target="_blank">Wai CT, Greenson JK, Fontana RJ, et al. A simple noninvasive index can predict both significant fibrosis and cirrhosis in patients with chronic hepatitis C. Hepatology 2003;38(2):518-26. PMID: 12883497</a>
+				<ul>
+				<li>Wai CT, Greenson JK, Fontana RJ, et al. A simple noninvasive index can predict both significant fibrosis and cirrhosis in patients with chronic hepatitis C. Hepatology 2003;38(2):518-26. PMID: 12883497 <a href="https://www.ncbi.nlm.nih.gov/pubmed/12883497" target="_blank">&nbsp;<i class="fa-solid fa-up-right-from-square"></i></a></li>
+				</ul>
 				<h4>FIB4:</h4>
-				<a href="https://www.ncbi.nlm.nih.gov/pubmed/16729309" target="_blank">Sterling RK, Lissen E, Clumeck N, et al. Development of a simple noninvasive index to predict significant fibrosis in patients with HIV/HCV coinfection. Hepatology 2006;43(6):1317-25. PMID: 16729309 </a>
-				<a href="https://pubmed.ncbi.nlm.nih.gov/19523535" target="_blank">Shah AG et al. Comparison of noninvasive markers of fibrosis in patients with nonalcoholic fatty liver disease. Clin Gastroenterol Hepatol 2009 PMID: 19523535</a>
+				<ul>
+					<li>Sterling RK, Lissen E, Clumeck N, et al. Development of a simple noninvasive index to predict significant fibrosis in patients with HIV/HCV coinfection. Hepatology 2006;43(6):1317-25. PMID: 16729309 <a href="https://www.ncbi.nlm.nih.gov/pubmed/16729309" target="_blank">&nbsp;<i class="fa-solid fa-up-right-from-square"></i></a></li>
+					<li>Shah AG et al. Comparison of noninvasive markers of fibrosis in patients with nonalcoholic fatty liver disease. Clin Gastroenterol Hepatol 2009. PMID: 19523535 <a href="https://pubmed.ncbi.nlm.nih.gov/19523535" target="_blank">&nbsp;<i class="fa-solid fa-up-right-from-square"></i></a></li>
+				</ul>
 				<h4>NAFLD Fibrosis Score:</h4>
-				<a href="https://www.ncbi.nlm.nih.gov/pubmed/17393509" target="_blank">Angulo P, Hui JM, Marchesini G, et al. The NAFLD fibrosis score: a noninvasive system that identifies liver fibrosis in patients with NAFLD. Hepatology 2007 Apr;45(4):846-54. PMID: 17393509</a>
+				<ul>
+					<li>Angulo P, Hui JM, Marchesini G, et al. The NAFLD fibrosis score: a noninvasive system that identifies liver fibrosis in patients with NAFLD. Hepatology 2007 Apr;45(4):846-54. PMID: 17393509 <a href="https://www.ncbi.nlm.nih.gov/pubmed/17393509" target="_blank">&nbsp;<i class="fa-solid fa-up-right-from-square"></i></a></li>
+				</ul>
 				<h4>NAFLD Activity Score:</h4>
-				<a href="https://www.ncbi.nlm.nih.gov/pubmed/15915461" target="_blank">Kleiner DE, Brunt EM, Van Natta M, et al. Design and validation of a histological scoring system for nonalcoholic fatty liver disease. Hepatology 2005;41(6):1313-21. PMID: 15915461</a>
-<!--			<h4>Predicting Cancer Recurrence Score (PCRS):</h4>
-				<a href="https://www.ncbi.nlm.nih.gov/pubmed/18581511" target="_blank">Chan EY, Larson AM, Fix OK, et al. Identifying risk for recurrent hepatocellular carcinoma after liver transplantation: implications for surveillance studies and new adjuvant therapies. Liver Transpl 2008 Jul;14(7):956-65. PMID: 18581511</a> -->
+				<ul>
+					<li>Kleiner DE, Brunt EM, Van Natta M, et al. Design and validation of a histological scoring system for nonalcoholic fatty liver disease. Hepatology 2005;41(6):1313-21. PMID: 15915461 <a href="https://www.ncbi.nlm.nih.gov/pubmed/15915461" target="_blank">&nbsp;<i class="fa-solid fa-up-right-from-square"></i></a></li>
+				</ul>
 				<h4>Risk Estimation of Tumor Recurrence After Transplant (RETREAT):</h4>
-				<a href="https://www.ncbi.nlm.nih.gov/pubmed/27838698" target="_blank">Mehta N, Heimbach J, Harnois DM, et al. Validation of a Risk Estimation of Tumor Recurrence After Transplant (RETREAT) score for hepatocellular carcinoma recurrence after liver transplant. JAMA Oncol 2017;3(4):493-500. PMID: 27838698</a>
-				<a href="https://www.ncbi.nlm.nih.gov/pubmed/29068145" target="_blank">Mehta N, Dodge JL, Roberts JP, et al. Validation of the prognostic power of the RETREAT score for hepatocellular carcinoma recurrence using the UNOS database. Am J Transplant 2018 May;18(5)1206-1213. PMID: 29068145</a>
-				<a href="https://www.ncbi.nlm.nih.gov/pubmed/31710773" target="_blank">Verna EC, Patel YA, Aggarwal A, et al. Liver transplantation for hepatocellular carcinoma: management after the transplant. Am J Transplant. 2020;20(2):333-347. PMID: 31710773</a>
-				<a href="https://www.ncbi.nlm.nih.gov/pubmed/34331914" target="_blank">Mehta N, Frenette C, Tabrizian P, et al. Downstaging Outcomes for Hepatocellular Carcinoma: Results from the Multicenter Evaluation of Reduction in Tumor Size before Liver Transplantation (MERITS-LT) Consortium. Gastroenterol. 2021;161:1502-1512. PMID: 34331914</a>
-				<p>&copy; <script>document.write(new Date().getFullYear());</script> Oren Fix. All rights reserved.</p>
-			</div>
-		</div>
-
-<!--	<div data-role='page' data-title='MELD-Na Calculator' id="meld">
-		<div class='outerWrapper'>
-			<h3>MELD-Na Calculator</h3>
-
-			<div class='back'><a href='#toc' title='back' data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline">back</a></div>
-
-			<div class="input" id="inputMeld">
-				<div data-role="fieldcontain">
-	    			<label for="inrMeld">INR</label>
-	    			<input type="number" name="inrMeld" id="inrMeld" />
-				</div>	
-				<div class="input" data-role="fieldcontain">
-	    			<label for="biilMeld">Bilirubin (mg/dL)</label>
-	    			<input type="number" name="biliMeld" id="biliMeld" />
-				</div>
-				<div class="input" data-role="fieldcontain">
-	    			<label for="creatinineMeld">Creatinine (mg/dL)</label>
-	    			<input type="number" name="creatinineMeld" id="creatinineMeld" />
-				</div>
-				<div class="input" data-role="fieldcontain">
-	    			<label for="sodiumMeld">Sodium (mmol/L)</label>
-	    			<input type="number" name="sodiumMeld" id="sodiumMeld" />
-				</div>
-				<div data-role="fieldcontain">
-					<fieldset data-role='controlgroup' data-type='horizontal'>
-						<legend>Dialysis?</legend>
-						<input type="radio" name="dialysis" id='dialysis-yes' value="yes">
-						<label for='dialysis-yes'>Yes</label>
-						<input type="radio" name="dialysis" id='dialysis-no' value="no" checked>
-						<label for='dialysis-no'>No</label>
-					</fieldset>
-				</div>
-
-				<p><small><i>*2 or more dialysis treatments within the prior week<br>or 24 hours of CVVHD within the prior week</i></small></p>
-				<div data-role="fieldcontain">
-					<fieldset data-role='controlgroup' data-type='horizontal'>
-						<legend>Equation</legend>
-						<input type="radio" name="equation" id='srtr' value="SRTR" checked>
-						<label for='srtr'>UNOS</label>
-						<input type="radio" name="equation" id='nejm' value="NEJM">
-						<label for='nejm'>NEJM</label>
-					</fieldset>
-				</div>
-			</div>
-
-			<button id="buttonMeld">Calculate MELD-Na</button>
-			<div id="outputMeld">
-				<p id="resultMeldNa"></p>
-				<p id="resultMeld"></p>
-			</div>
-		</div>
-		</div>
+				<ul>
+					<li>Mehta N, Heimbach J, Harnois DM, et al. Validation of a Risk Estimation of Tumor Recurrence After Transplant (RETREAT) score for hepatocellular carcinoma recurrence after liver transplant. JAMA Oncol 2017;3(4):493-500. PMID: 27838698 <a href="https://www.ncbi.nlm.nih.gov/pubmed/27838698" target="_blank">&nbsp;<i class="fa-solid fa-up-right-from-square"></i></a></li>
+					<li>Mehta N, Dodge JL, Roberts JP, et al. Validation of the prognostic power of the RETREAT score for hepatocellular carcinoma recurrence using the UNOS database. Am J Transplant 2018 May;18(5)1206-1213. PMID: 29068145 <a href="https://www.ncbi.nlm.nih.gov/pubmed/29068145" target="_blank">&nbsp;<i class="fa-solid fa-up-right-from-square"></i></a></li>
+					<li>Verna EC, Patel YA, Aggarwal A, et al. Liver transplantation for hepatocellular carcinoma: management after the transplant. Am J Transplant. 2020;20(2):333-347. PMID: 31710773 <a href="https://www.ncbi.nlm.nih.gov/pubmed/31710773" target="_blank">&nbsp;<i class="fa-solid fa-up-right-from-square"></i></a></li>
+					<li>Mehta N, Frenette C, Tabrizian P, et al. Downstaging Outcomes for Hepatocellular Carcinoma: Results from the Multicenter Evaluation of Reduction in Tumor Size before Liver Transplantation (MERITS-LT) Consortium. Gastroenterol. 2021;161:1502-1512. PMID: 34331914 <a href="https://www.ncbi.nlm.nih.gov/pubmed/34331914" target="_blank">&nbsp;<i class="fa-solid fa-up-right-from-square"></i></a></li>
+				</ul>
+				<h4>GALAD:</h4>
+				<ul>
+					<li>Johnson PJ, Pirrie SJ, Cox TF, et al. Cancer Epidemiol Biomarkers Prev 2014;23:144-153. PMID: 24220911 <a href="https://pubmed.ncbi.nlm.nih.gov/24220911" target="_blank">&nbsp;<i class="fa-solid fa-up-right-from-square"></i></a></li>
+					<li>Best J, Bilgi H, Heider H, et al. The GALAD scoring algorithm based on AFP, AFP-L3, and DCP significantly improves detection of BCLC early stage hepatocellular carcinoma. Z Gastroenterol 2016;54:1296-1305. PMID: 27936479 <a href="https://www.ncbi.nlm.nih.gov/pubmed/27936479" target="_blank">&nbsp;<i class="fa-solid fa-up-right-from-square"></i></a></li>
+					<li>Kumada T, Toyoda H, Kiriyama S, et al. Predictive value of tumor markers for hepatocarcinogenesis in patients with hepatitis C virus. J Gastroenterol 2011;46:536-44. PMID: 21132575 <a href="https://www.ncbi.nlm.nih.gov/pubmed/21132575" target="_blank">&nbsp;<i class="fa-solid fa-up-right-from-square"></i></a></li>
+				</ul>
+				<h4>LAD Score:</h4>
+				<ul>
+					<li>Liang J, Li P-Y, Norman J, et al. Development and validation of a biomarker index for HCC treatment response. Hepatol Commun 2024;8:e0466. PMID: 38896084 <a href="https://www.ncbi.nlm.nih.gov/pubmed/38896084" target="_blank">&nbsp;<i class="fa-solid fa-up-right-from-square"></i></a></li>
+				</ul>
 -->
+				<p><small>&copy; <script>document.write(new Date().getFullYear());</script> Oren Fix. All rights reserved.</small></p>
+			</div>
+		</div>
+
+
+		<div data-role='page' data-title='MELD 3.0 Calculator' id="meld">
+			<div class='outerWrapper'>
+				<h3>&nbsp;</h3>
+				<div class='back'><a href='#toc' title='back' data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline">back</a></div>
+				<embed src="https://orenfixmd.com/meld">
+			</div>
+		</div>
 
 		<div data-role='page' data-title='BMI Calculator' id="bmi">
-		<div class='outerWrapper'>
-			<h3>BMI Calculator</h3>
+			<div class='outerWrapper'>
 
-			<div class='back'><a href='#toc' title='back' data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline">back</a></div>
+				<h3>BMI</h3>
 
-			<div class="input" id="inputBmi">
-				<div class="input" data-role="fieldcontain">
-	    			<label for="'weight'">Weight</label>
-	    			<input type="number" name="weight" id="weight"/>
+				<h5 class='announcement'><b>NEW! REVERSE BMI CALCULATOR: </b><br>Calculate the weight needed for a target BMI</h5>
+				<div class='back'><a href='#toc' title='back' data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline">back</a></div>
+				<div class="input" id="inputBmi">
+					<div class="input" data-role="fieldcontain">
+		    			<label for="weight">Weight</label>
+		    			<input type="number" placeholder="lb" name="weight" id="weight"/>
+					</div>
+					<div data-role="fieldcontain">
+						<fieldset data-role='controlgroup' data-type='horizontal' data-mini="true">
+							<input tabindex="-1" class="units" type="radio" name="weightUnits" id="lb" value="lb" checked>
+							<label for="lb">lb</label>
+							<input tabindex="-1" class="units" type="radio" name="weightUnits" id="kg" value="kg">
+							<label for="kg">kg</label>
+						</fieldset>
+					</div>
+						<div class="input" data-role="fieldcontain">
+			    			<label for="heightFt">Height</label>
+			    			<input type="number" placeholder="feet" name="heightFt" id="heightFt"/>
+							<input type="number" placeholder="in" name="heightIn" id="heightIn" />
+						</div>
+					<div data-role="fieldcontain">
+						<fieldset data-role='controlgroup' data-type='horizontal' data-mini="true">
+							<input tabindex="-1" class="units" type="radio" name="heightUnits" id="ft" value="ft" checked>
+							<label for="ft">ft / in</label>
+							<input tabindex="-1" class="units" type="radio" name="heightUnits" id="cm" value="cm">
+							<label for="cm">cm</label>
+						</fieldset>
+					</div>
 				</div>
-				<div data-role="fieldcontain">
-					<fieldset data-role='controlgroup' data-type='horizontal'>
-						<input tabindex="-1" class="units" type="radio" name="weightUnits" id="lb" value="lb" checked>
-						<label for="lb">lb</label>
-						<input tabindex="-1" class="units" type="radio" name="weightUnits" id="kg" value="kg">
-						<label for="kg">kg</label>
-					</fieldset>
-				</div>
-				<label id="label-height">Height</label>
-				<div id="toggleFt">
-				<div class="input" data-role="fieldcontain">
-	    			<label for="heightFt">feet</label>
-	    			<input type="number" name="heightFt" id="heightFt"/>
-				</div>
-				<div class="input" data-role="fieldcontain">
-					<label for="heightIn">inches</label>
-					<input type="number" name="heightIn" id="heightIn" />
-				</div>
-				</div>
-				<div id="toggleCm">
-				<div class="input" data-role="fieldcontain">
-					<label for="heightCm">cm</label>
-					<input type="number" name="heightCm" id="heightCm" />
-				</div>
-				</div>
-				<div data-role="fieldcontain">
-					<fieldset data-role='controlgroup' data-type='horizontal'>
-						<input tabindex="-1" class="units" type="radio" name="heightUnits" id="ft" value="ft" checked>
-						<label for="ft">ft / in</label>
-						<input tabindex="-1" class="units" type="radio" name="heightUnits" id="cm" value="cm">
-						<label for="cm">cm</label>
-					</fieldset>
+
+				<button id="buttonBmi">Calculate BMI</button>
+				<div id="outputBmi">
+					<p id="resultBmi"></p>
+					<p id="category"></p>
+					<p id="normal"></p>
 				</div>
 			</div>
 
-			<button id="buttonBmi">Calculate BMI</button>
-			<div id="outputBmi">
-				<p id="resultBmi"></p>
-				<p id="category"></p>
-				<p id="normal"></p>
+			<div class='outerWrapper'>
+				<h3 class='reverseBmi'>Reverse BMI Calculator</h3>
+				<h5>Enter height above and select goal BMI below to calculate target weight</h5>
+					<div class="input" id="inputReverseBmi">
+						<div class="input" data-role="fieldcontain">
+			    			<label for="'goalBmi'">Goal BMI</label>
+			    			<input type="number" name="goalBmi" placeholder="kg/m&sup2;" id="goalBmi"/>
+						</div>
+					</div>
+
+					<button id="buttonReverseBmi">Calculate Target Weight</button>
+					<div id="outputReverseBmi">
+						<p id="resultReverseBmi"></p>
+					</div>
+			
+			<div class='references'>
+				<a href="https://pubmed.ncbi.nlm.nih.gov/4650929" target="_blank">Reference</a>
 			</div>
-		</div>
+			</div>
 		</div>
 
 
 		<div data-role='page' data-title='CTP Calculator' id="ctp">
 		<div class='outerWrapper'>
-			<h3>Child-Turcotte-Pugh Calculator</h3>
+
+			<h3>Child-Turcotte-Pugh</h3>
 
 			<div class='back'><a href='#toc' title='back' data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline">back</a></div>
-
 			<div class="input">
-				<label for="encephalopathy" class="select">Encephalopathy</label>
-				<select name="encephalopathy" id="encephalopathy">
-					<option value="1">None</option>
-					<option value="2">Grade 1-2</option>
-					<option value="3">Grade 3-4</option>
-				</select>
+				<fieldset data-role="controlgroup" id="encephalopathy" data-type="horizontal">
+					<legend>Encephalopathy</legend>
+					<input type="radio" name="encephalopathy" id="encephalopathy1" value="1" checked="checked" />
+					<label for="encephalopathy1">None</label>
+					<input type="radio" name="encephalopathy" id="encephalopathy2" value="2" />
+					<label for="encephalopathy2">Grade 1-2</label>
+					<input type="radio" name="encephalopathy" id="encephalopathy3" value="3" />
+					<label for="encephalopathy3">Grade 3-4</label>
+				</fieldset>
 
-				<label for="ascites" class="select">Ascites</label>
-				<select name="ascites" id="ascites">
-					<option value="1">None</option>
-					<option value="2">Mild/Moderate</option>
-					<option value="3">Severe</option>
-				</select>
+				<fieldset data-role="controlgroup" id="ascites" data-type="horizontal">
+					<legend>Ascites</legend>
+					<input type="radio" name="ascites" id="ascites1" value="1" checked="checked" />
+					<label for="ascites1">None</label>
+					<input type="radio" name="ascites" id="ascites2" value="2" />
+					<label for="ascites2">Mild/Moderate</label>
+					<input type="radio" name="ascites" id="ascites3" value="3" />
+					<label for="ascites3">Severe</label>
+				</fieldset>
 
-				<label for="biliCtp" class="select">Bilirubin (mg/dL)</label>
-				<select name="biliCtp" id="biliCtp">
-					<option value="1">&lt;2</option>
-					<option value="2">2-3</option>
-					<option value="3">&gt;3</option>
-				</select>
+				<fieldset data-role="controlgroup" id="biliCtp" data-type="horizontal">
+					<legend>Bilirubin (mg/dL)</legend>
+					<input type="radio" name="biliCtp" id="biliCtp1" value="1" checked="checked" />
+					<label for="biliCtp1">&lt;2</label>
+					<input type="radio" name="biliCtp" id="biliCtp2" value="2" />
+					<label for="biliCtp2">2-3</label>
+					<input type="radio" name="biliCtp" id="biliCtp3" value="3" />
+					<label for="biliCtp3">&gt;3</label>
+				</fieldset>
 
-				<label for="albCtp" class="select">Albumin (g/dL)</label>
-				<select name="albCtp" id="albCtp">
-					<option value="1">&gt;3.5</option>
-					<option value="2">2.8-3.5</option>
-					<option value="3">&lt;2.8</option>
-				</select>
+				<fieldset data-role="controlgroup" id="albCtp" data-type="horizontal">
+					<legend>Albumin (g/dL)</legend>
+					<input type="radio" name="albCtp" id="albCtp1" value="1" checked="checked" />
+					<label for="albCtp1">&gt;3.5</label>
+					<input type="radio" name="albCtp" id="albCtp2" value="2" />
+					<label for="albCtp2">2.8-3.5</label>
+					<input type="radio" name="albCtp" id="albCtp3" value="3" />
+					<label for="albCtp3">&lt;2.8</label>
+				</fieldset>
 
-				<label for="inrCtp" class="select">INR</label>
-				<select name="inrCtp" id="inrCtp">
-					<option value="1">&lt;1.7</option>
-					<option value="2">1.7-2.3</option>
-					<option value="3">&gt;2.3</option>
-				</select>
+				<fieldset data-role="controlgroup" id="inrCtp" data-type="horizontal">
+					<legend>INR</legend>
+					<input type="radio" name="inrCtp" id="inrCtp1" value="1" checked="checked" />
+					<label for="inrCtp1">&lt;1.7</label>
+					<input type="radio" name="inrCtp" id="inrCtp2" value="2" />
+					<label for="inrCtp2">1.7-2.3</label>
+					<input type="radio" name="inrCtp" id="inrCtp3" value="3" />
+					<label for="inrCtp3">&gt;2.3</label>
+				</fieldset>
 			</div>
 
-			<button id="buttonCtp">Calculate CTP</button>
 			<div id="outputCtp">
-				<p id="resultCtpScore"></p>
-				<p id="resultCtpClass"></p>
+				<p id="resultCtp"></p>
+			</div>
+			<div class='references'>
+				<a href="https://pubmed.ncbi.nlm.nih.gov/?term=4950264+4541913" target="_blank">References</a>
 			</div>
 		</div>
+		</div>
+
+
+		<div data-role='page' data-title='AUDIT-C Calculator' id="audit">
+		<div class='outerWrapper'>
+
+			<h3>AUDIT-C</h3>
+
+			<div class='back'><a href='#toc' title='back' data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline">back</a></div>
+			<div class="input">
+				<fieldset data-role="controlgroup" id="audit-c-sex">
+					<legend>Select sex</legend>
+					<input type="radio" name="audit-c-sex" id="audit-c-sex-m" value="male" />
+					<label for="audit-c-sex-m">Male</label>
+					<input type="radio" name="audit-c-sex" id="audit-c-sex-f" value="female" />
+					<label for="audit-c-sex-f">Female</label>
+				</fieldset>
+	
+				<fieldset data-role="controlgroup" id="audit-c-1">
+					<legend>1. How often did you have a drink containing alcohol in the past year?</legend>
+					<p><small><i>Consider a drink to be a 12-oz can or bottle of beer, a 4-oz glass of wine, a wine cooler, 1 cocktail, or a shot (1.25 oz) of hard liquor</i></small></p>
+					<input type="radio" name="audit-c-1" id="audit-c-1-0" value="0" />
+					<label for="audit-c-1-0">Never</label>
+					<input type="radio" name="audit-c-1" id="audit-c-1-1" value="1" />
+					<label for="audit-c-1-1">Monthly or less</label>
+					<input type="radio" name="audit-c-1" id="audit-c-1-2" value="2" />
+					<label for="audit-c-1-2">2 to 4 times a month</label>
+					<input type="radio" name="audit-c-1" id="audit-c-1-3" value="3" />
+					<label for="audit-c-1-3">2 to 3 times a week</label>
+					<input type="radio" name="audit-c-1" id="audit-c-1-4" value="4" />
+					<label for="audit-c-1-4">4 or more times a week</label>
+				</fieldset>
+
+				<div id="audit-c-2and3">
+					<fieldset data-role="controlgroup" id="audit-c-2">
+						<legend>2. How many drinks did you have on a typical day when you were drinking in the past year?</legend>
+						<input type="radio" name="audit-c-2" id="audit-c-2-0" value="0" />
+						<label for="audit-c-2-0">1-2</label>
+						<input type="radio" name="audit-c-2" id="audit-c-2-1" value="1" />
+						<label for="audit-c-2-1">3-4</label>
+						<input type="radio" name="audit-c-2" id="audit-c-2-2" value="2" />
+						<label for="audit-c-2-2">5-6</label>
+						<input type="radio" name="audit-c-2" id="audit-c-2-3" value="3" />
+						<label for="audit-c-2-3">7-9</label>
+						<input type="radio" name="audit-c-2" id="audit-c-2-4" value="4" />
+						<label for="audit-c-2-4">10 or more</label>
+					</fieldset>
+
+					<fieldset data-role="controlgroup" id="audit-c-3">
+						<legend>3. How often did you have 6 or more drinks on one occasion in the past year?</legend>
+						<input type="radio" name="audit-c-3" id="audit-c-3-0" value="0" />
+						<label for="audit-c-3-0">Never</label>
+						<input type="radio" name="audit-c-3" id="audit-c-3-1" value="1" />
+						<label for="audit-c-3-1">Less than monthly</label>
+						<input type="radio" name="audit-c-3" id="audit-c-3-2" value="2" />
+						<label for="audit-c-3-2">Monthly</label>
+						<input type="radio" name="audit-c-3" id="audit-c-3-3" value="3" />
+						<label for="audit-c-3-3">Weekly</label>
+						<input type="radio" name="audit-c-3" id="audit-c-3-4" value="4" />
+						<label for="audit-c-3-4">Daily or almost daily</label>
+					</fieldset>
+				</div>
+			</div>
+
+			<div id="outputAuditC">
+				<p id="resultAuditC"></p>
+				<p id="riskAuditC"></p>
+				<p id="disclaimerAuditC"></p>
+			</div>
+			<div class='references'>
+				<a href="https://pubmed.ncbi.nlm.nih.gov/?term=9738608+30422199" target="_blank">References</a>
+			</div>
+		</div> 
 		</div>
 
 	
 		<div data-role='page' data-title='DF Calculator' id="df">
 		<div class='outerWrapper'>
-			<h3>Maddrey's Discriminant Function Calculator</h3>
+
+			<h3>Maddrey's Discriminant Function</h3>
 
 			<div class='back'><a href='#toc' title='back' data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline">back</a></div>
-
 			<div class="input" id="inputDf">
 				<div data-role="fieldcontain">
-	    			<label for="ptDf">PT (s)</label>
-	    			<input type="number" name="ptDf" id="ptDf"/>
+	    			<label for="biliDf">Bilirubin</label>
+	    			<input type="number" placeholder="mg/dL" name="biliDf" id="biliDf"/>
 				</div>
 				<div data-role="fieldcontain">
-	    			<label for="control">PT control (s)</label>
-	    			<input type="number" name="control" id="control" value="12.2"/>
+	    			<label for="ptDf">PT</label>
+	    			<input type="number" placeholder="seconds" name="ptDf" id="ptDf"/>
 				</div>
 				<div data-role="fieldcontain">
-	    			<label for="biliDf">Bilirubin (mg/dL)</label>
-	    			<input type="number" name="biliDf" id="biliDf"/>
+	    			<label for="control">PT control</label>
+	    			<input type="number" placeholder="seconds" name="control" id="control"/>
+	    			<p><small><i>Usually the ULN</i></small></p>
 				</div>
 			</div>
+
 			<button id="buttonDf">Calculate DF</button>
 			<div id="outputDf">
 				<p id="resultDf"></p>
+			</div>
+			<div class='references'>
+				<a href="https://pubmed.ncbi.nlm.nih.gov/352788" target="_blank">Reference</a>
 			</div>
 		</div>
 		</div>
@@ -297,23 +377,25 @@
 
 		<div data-role='page' data-title='Lille Calculator' id="lille">
 		<div class='outerWrapper'>
-			<h3>Lille Model Calculator</h3>
 
+			<h3>Lille Model</h3>
+
+			<h5 class='announcement'><b>NEW! REVERSE LILLE CALCULATOR: </b><br>Leave bilirubin day 4/7 blank for reverse Lille calculator (calculates maximum bilirubin allowed for favorable prognosis)</h5>
 			<div class='back'><a href='#toc' title='back' data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline">back</a></div>
-
 			<div class="input" id="inputLille">
-				<label for="ageLille">Age (years)</label>
-				<input type="number" id="ageLille" />
-				<label for="bili0Mg_dL">Bilirubin, Day 0 (mg/dL)</label>
-				<input type="number" id="bili0Mg_dL" />
-				<label for="bili7Mg_dL">Bilirubin, Day 7 (mg/dL)</label>
-				<input type="number" id="bili7Mg_dL" />
-				<label for="albuminG_dL">Albumin, Day 0 (g/dL)</label>
-				<input type="number" id="albuminG_dL" />
-				<label for="creatinineMg_dL">Creatinine, Day 0 (mg/dL)</label>
-				<input type="number" id="creatinineMg_dL" />
+				<label for="ageLille">Age</label>
+				<input type="number" placeholder="years" id="ageLille" />
+				<label for="bili0Mg_dL">Bilirubin, Day 0</label>
+				<input type="number" placeholder="mg/dL" id="bili0Mg_dL" />
+				<label for="albuminG_dL">Albumin, Day 0</label>
+				<input type="number" placeholder="g/dL" id="albuminG_dL" />
+				<label for="creatinineMg_dL">Creatinine, Day 0</label>
+				<input type="number" placeholder="mg/dL" id="creatinineMg_dL" />
 				<label for="ptLille">PT (s) <i>or</i> INR, Day 0</label>
-				<input type="number" id="ptLille" />			
+				<input type="number" id="ptLille" />
+				<label for="bili7Mg_dL">Bilirubin, Day 4 or 7</label>
+				<input type="number" placeholder="mg/dL" id="bili7Mg_dL" />
+				<p><small><i>Leave bilirubin day 4/7 blank for 'reverse Lille calculator'<br> (calculates maximum bilirubin allowed for favorable prognosis)</i></small></p>			
 			</div>
 
 			<button id="buttonLille">Calculate Lille Model</button>
@@ -321,28 +403,31 @@
 				<p id="resultLille"></p>
 				<p id="riskLille"></p>
 			</div>
+			<div class='references'>
+				<a href="https://pubmed.ncbi.nlm.nih.gov/?term=17518367+27922027" target="_blank">References</a>
+			</div>
 		</div>
 		</div>
 
 
 		<div data-role='page' data-title='APRI Calculator' id="apri">
 		<div class='outerWrapper'>
-			<h3>APRI Calculator</h3>
+
+			<h3>APRI</h3>
 
 			<div class='back'><a href='#toc' title='back' data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline">back</a></div>
-
 			<div class="input" id="inputApri">
 				<div data-role="fieldcontain">
-					<label for="astApri">AST (U/L)</label>
-					<input type="number" id="astApri" />
+					<label for="astApri">AST</label>
+					<input type="number" placeholder="U/L" id="astApri" />
 				</div>
 				<div data-role="fieldcontain">
-					<label for="astulnApri">AST ULN (U/L)</label>
-					<input type="number" value="40" id="astulnApri" />
+					<label for="astulnApri">AST ULN</label>
+					<input type="number" placeholder="U/L" id="astulnApri" />
 				</div>
 				<div data-role="fieldcontain">
-					<label for="pltApri">Platelets (10<sup>9</sup>/L)</label>
-					<input type="number" id="pltApri" />
+					<label for="pltApri">Platelets</label>
+					<input type="number" placeholder="x10&#8313;/L"id="pltApri" />
 				</div>
 			</div>
 
@@ -351,32 +436,35 @@
 				<p id="resultApri"></p>
 				<p id="riskApri"></p>
 			</div>
+			<div class='references'>
+				<a href="https://pubmed.ncbi.nlm.nih.gov/12883497" target="_blank">Reference</a>
+			</div>
 		</div>
 		</div>
 
 
 		<div data-role='page' data-title='FIB4 Calculator' id="fib4">
 		<div class='outerWrapper'>
-			<h3>FIB4 Calculator</h3>
+
+			<h3>FIB4</h3>
 
 			<div class='back'><a href='#toc' title='back' data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline">back</a></div>
-
 			<div class="input" id="inputFib4">
 				<div data-role="fieldcontain">
-					<label for="ageFib4">Age (yrs)</label>
-					<input type="number" id="ageFib4" />
+					<label for="ageFib4">Age</label>
+					<input type="number" placeholder="years" id="ageFib4" />
 				</div>
 				<div data-role="fieldcontain">
-					<label for="astFib4">AST (U/L)</label>
-					<input type="number" id="astFib4" />
+					<label for="astFib4">AST</label>
+					<input type="number" placeholder="U/L" id="astFib4" />
 				</div>
 				<div data-role="fieldcontain">
-					<label for="altFib4">ALT (U/L)</label>
-					<input type="number" id="altFib4" />
+					<label for="altFib4">ALT</label>
+					<input type="number" placeholder="U/L" id="altFib4" />
 				</div>
 				<div data-role="fieldcontain">
-					<label for="pltFib4">Platelets (10<sup>9</sup>/L)</label>
-					<input type="number" id="pltFib4" />
+					<label for="pltFib4">Platelets</label>
+					<input type="number" placeholder="x10&#8313;/L" id="pltFib4" />
 				</div>
 			</div>
 
@@ -385,26 +473,28 @@
 				<p id="resultFib4"></p>
 				<p id="riskFib4"></p>
 			</div>
+			<div class='references'>
+				<a href="https://pubmed.ncbi.nlm.nih.gov/?term=16729309+19523535" target="_blank">References</a>
+			</div>
 		</div>
 		</div>
 
 
 		<div data-role='page' data-title='NAFLD Fibrosis Score Calculator' id="nafld">
 		<div class='outerWrapper'>
-			<h3>NAFLD Fibrosis Score Calculator</h3>
+
+			<h3>NAFLD Fibrosis Score</h3>
 
 			<div class='back'><a href='#toc' title='back' data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline">back</a></div>
-
 			<div class="input" id="inputNafld">
 				<div data-role="fieldcontain">
-					<label for="ageNafld">Age (yrs)</label>
-					<input type="number" id="ageNafld" />
+					<label for="ageNafld">Age</label>
+					<input type="number" placeholder="years" id="ageNafld" />
 				</div>
 				<div data-role="fieldcontain">
-					<label for="bmiNafld">BMI (kg/m<sup>2</sup>)</label>
-					<input type="number" id="bmiNafld" />
+					<label for="bmiNafld">BMI</label>
+					<input type="number" placeholder="kg/m&sup2;" id="bmiNafld" />
 				</div>
-
 				<div data-role="fieldcontain">
 					<fieldset data-role='controlgroup' data-type='horizontal'>
 						<legend>IFG / Diabetes</legend>
@@ -415,22 +505,21 @@
 					</fieldset>
 				</div>
 				<p><small><i>*impaired fasting glucose</i></small></p>
-
 				<div data-role="fieldcontain">
-					<label for="astNafld">AST (U/L)</label>
-					<input type="number" id="astNafld" />
+					<label for="astNafld">AST</label>
+					<input type="number" placeholder="U/L" id="astNafld" />
 				</div>
 				<div data-role="fieldcontain">
-					<label for="altNafld">ALT (U/L)</label>
-					<input type="number" id="altNafld" />
+					<label for="altNafld">ALT</label>
+					<input type="number" placeholder="U/L" id="altNafld" />
 				</div>
 				<div data-role="fieldcontain">
-					<label for="pltNafld">Platelets (x10<sup>9</sup>/L)</label>
-					<input type="number" id="pltNafld" />
+					<label for="pltNafld">Platelets</label>
+					<input type="number" placeholder="x10&#8313;/L" id="pltNafld" />
 				</div>
 				<div data-role="fieldcontain">
-					<label for="albuminNafld">Albumin (g/dL)</label>
-					<input type="number" id="albuminNafld" />
+					<label for="albuminNafld">Albumin</label>
+					<input type="number" placeholder="g/dL" id="albuminNafld" />
 				</div>
 			</div>
 
@@ -439,16 +528,19 @@
 				<p id="resultNafld"></p>
 				<p id="fibrosis"></p>
 			</div>
+			<div class='references'>
+				<a href="https://pubmed.ncbi.nlm.nih.gov/17393509" target="_blank">Reference</a>
+			</div>
 		</div>
 		</div>
 
 
 		<div data-role='page' data-title='NAS Calculator' id="nas">
 		<div class='outerWrapper'>
-			<h3>NAFLD Activity Score (NAS) Calculator</h3>
+
+			<h3>NAFLD Activity Score (NAS)</h3>
 
 			<div class='back'><a href='#toc' title='back' data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline">back</a></div>
-
 			<div class="input" id="inputNas">
 				<label for="steatosis" class="select">Steatosis grade</label>
 				<select name="steatosis" id="steatosis">
@@ -472,79 +564,27 @@
 				</select>
 			</div>
 
-			<button id="buttonNas">Calculate NAFLD Activity Score</button>
 			<div id="outputNas">
 				<p id="resultNas"></p>
 				<p id="activity"></p>
 			</div>
-		</div>
-		</div>
-
-
-<!--	<div data-role='page' data-title='PCRS Calculator' id="pcrs">
-		<div class='outerWrapper'>
-			<h3>Predicting Cancer Recurrence Score (PCRS) Calculator</h3>
-
-			<div class='back'><a href='#toc' title='back' data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline">back</a></div>
-
-			<div class="input" id="inputPcrs">
-				<div data-role="fieldcontain">
-					<fieldset data-role='controlgroup' data-type='horizontal'>
-						<legend>Largest tumor diameter &gt;4.5 cm?</legend>
-						<input type="radio" name="tumorSize" id="tumorSize-yes" value="1">
-						<label for="tumorSize-yes">Yes</label>
-						<input type="radio" name="tumorSize" id="tumorSize-no" value="0" checked>
-						<label for="tumorSize-no">No</label>
-					</fieldset>
-				</div>
-				<div data-role="fieldcontain">
-					<fieldset data-role='controlgroup' data-type='horizontal'>
-						<legend>Tumor in both lobes?</legend>
-						<input type="radio" name="bothLobes" id="bothLobes-yes" value="2">
-						<label for="bothLobes-yes">Yes</label>
-						<input type="radio" name="bothLobes" id="bothLobes-no" value="0" checked>
-						<label for="bothLobes-no">No</label>
-					</fieldset>
-				</div>
-				<div data-role="fieldcontain">
-					<fieldset data-role='controlgroup' data-type='horizontal'>
-						<legend>Macrovascular invasion?</legend>
-						<input type="radio" name="macroInvasion" id="macroInvasion-yes" value="3">
-						<label for="macroInvasion-yes">Yes</label>
-						<input type="radio" name="macroInvasion" id="macroInvasion-no" value="0" checked>
-						<label for="macroInvasion-no">No</label>
-					</fieldset>
-				</div>
-				<div data-role="fieldcontain">
-					<fieldset data-role='controlgroup' data-type='horizontal'>
-						<legend>Well-differentiated tumor grade?</legend>
-						<input type="radio" name="tumorGrade" id="tumorGrade-yes" value="-3">
-						<label for="tumorGrade-yes">Yes</label>
-						<input type="radio" name="tumorGrade" id="tumorGrade-no" value="0" checked>
-						<label for="tumorGrade-no">No</label>
-					</fieldset>
-				</div>
-			</div>
-
-			<button id="buttonPcrs">Calculate PCRS</button>
-			<div id="outputPcrs">
-				<p id="resultPcrs"></p>
-				<p id="riskPcrs"></p>
+			<div class='references'>
+				<a href="https://pubmed.ncbi.nlm.nih.gov/15915461" target="_blank">Reference</a>
 			</div>
 		</div>
 		</div>
--->
+
 
 		<div data-role='page' data-title='RETREAT Calculator' id="retreat">
 		<div class='outerWrapper'>
+
 			<h3>RETREAT Calculator</h3>
 
 			<div class='back'><a href='#toc' title='back' data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline">back</a></div>
-
 			<div class="input" id="inputRetreat">
 				<div data-role="fieldcontain">
-	    			<label for="afp">AFP closest to the time of transplantation (ng/mL)</label>
-	    			<input type="number" name="afp" id="afp" />
+	    			<label for="afpRetreat">AFP closest to the time of transplantation</label>
+	    			<input type="number" name="afpRetreat" placeholder="ng/mL" id="afpRetreat" />
 				</div>	
 				<div data-role="fieldcontain">
 					<fieldset data-role='controlgroup' data-type='horizontal'>
@@ -557,12 +597,12 @@
 				</div>
 				<div class="input clearfix" data-role="fieldcontain">
 	    			<label for="tumorNumber">Number of viable tumors on explant pathology</label>
-	    			<input type="number" name="tumorNumber" id="tumorNumber" />
+	    			<input type="number" name="tumorNumber" placeholder="0 for none" id="tumorNumber" />
 				</div>
 				<p><small><i>Do not count completely necrotic lesions</i></small></p>
 				<div class="input clearfix" data-role="fieldcontain">
-	    			<label for="largestTumor">Size of largest viable tumor on explant pathology (cm)</label>
-	    			<input type="number" name="largestTumor" id="largestTumor" />
+	    			<label for="largestTumor">Size of largest viable tumor on explant pathology</label>
+	    			<input type="number" name="largestTumor" placeholder="cm" id="largestTumor" />
 				</div>
 				<p><small><i>Only measure the diameter of viable tumor</i></small></p>
 			</div>
@@ -571,6 +611,87 @@
 			<div id="outputRetreat">
 				<p id="resultRetreat"></p>
 				<p id="recRetreat"></p>
+			</div>
+			<div class='references'>
+				<a href="https://pubmed.ncbi.nlm.nih.gov/?term=27838698+29068145+31710773+34331914" target="_blank">References</a>
+			</div>
+		</div>
+		</div>
+
+		<div data-role='page' data-title='GALAD Calculator' id='galad'>
+		<div class='outerWrapper'>
+
+			<h3>GALAD Calculator</h3>
+
+			<div class='back'><a href='#toc' title='back' data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline">back</a></div>
+			<div class="input" id="inputGalad">
+				<fieldset data-role="controlgroup" id="sexGalad">
+					<legend>Sex</legend>
+					<input type="radio" name="sexGalad" id="sexGalad-m" value="1" checked />
+					<label for="sexGalad-m">Male</label>
+					<input type="radio" name="sexGalad" id="sexGalad-f" value="0" />
+					<label for="sexGalad-f">Female</label>
+				</fieldset>
+				<div data-role="fieldcontain">
+	    			<label for="adeGalad">Age</label>
+	    			<input type="number" name="ageGalad" placeholder="years" id="ageGalad" />
+				</div>					
+				<div data-role="fieldcontain">
+	    			<label for="afpGalad">AFP</label>
+	    			<input type="number" name="afpGalad" placeholder="ng/mL" id="afpGalad" />
+				</div>	
+				<div class="input" data-role="fieldcontain">
+	    			<label for="afpl3Galad">AFP-L3%</label>
+	    			<input type="number" name="afpl3Galad" placeholder="%" id="afpl3Galad" />
+				</div>
+				<div class="input" data-role="fieldcontain">
+	    			<label for="dcpGalad">DCP</label>
+	    			<input type="number" name="dcpGalad" placeholder="ng/mL" id="dcpGalad" />
+				</div>
+			</div>
+
+			<button id="buttonGalad">Calculate GALAD</button>
+			<div id="outputGalad">
+				<p id="resultGalad"></p>
+				<p id="probGalad"></p>
+
+			</div>
+			<div class='references'>
+				<a href="https://pubmed.ncbi.nlm.nih.gov/?term=24220911+27936479+21132575+39293548" target="_blank">References</a>
+			</div>
+		</div>
+		</div>
+
+		<div data-role='page' data-title='LAD Calculator' id='lad'>
+		<div class='outerWrapper'>
+
+			<h3>LAD Calculator</h3>
+
+			<div class='back'><a href='#toc' title='back' data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline">back</a></div>
+			<div class="input" id="inputLad">	
+				<div data-role="fieldcontain">
+	    			<label for="afpLad">AFP</label>
+	    			<input type="number" name="afpLad" placeholder="ng/mL" id="afpLad" />
+				</div>	
+				<div class="input" data-role="fieldcontain">
+	    			<label for="afpl3Lad">AFP-L3%</label>
+	    			<input type="number" name="afpl3Lad" placeholder="%" id="afpl3Lad" />
+				</div>
+				<div class="input" data-role="fieldcontain">
+	    			<label for="dcpLad">DCP</label>
+	    			<input type="number" name="dcpLad" placeholder="ng/mL" id="dcpLad" />
+				</div>
+			</div>
+
+			<button id="buttonLad">Calculate LAD</button>
+			<div id="outputLad">
+				<p id="resultLad"></p>
+				<p id="probLad"></p>
+				<p id="recLad"></p>
+
+			</div>
+			<div class='references'>
+				<a href="https://pubmed.ncbi.nlm.nih.gov/38896084" target="_blank">Reference</a>
 			</div>
 		</div>
 		</div>
