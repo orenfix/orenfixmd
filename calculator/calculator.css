@@ -43,7 +43,7 @@ body, h1, h2, h3, small, p, footer {
 }
 
 .header-toc {
-	padding: 1em 0 0 1em;
+	padding: 1em;
 	max-width: 360px;
 }
 
@@ -135,6 +135,11 @@ div.ui-field-contain {
 	border: 0;
 }
 
+.ui-field-contain:before, .ui-field-contain:after {
+	content: "";
+    display: table;
+}
+
 fieldset.ui-controlgroup {
 	padding-bottom: 1em; 
 }
@@ -169,7 +174,11 @@ fieldset.ui-controlgroup {
 	width: 100%; /* units toggle width */
 }
 
-#bmi .ui-field-contain > label ~ [class*="ui-"] {
+#inputBmi .ui-field-contain > label ~ [class*="ui-"] {
+	width: 3.7em; /* input box width */
+} 
+
+#inputReverseBmi .ui-field-contain > label ~ [class*="ui-"] {
 	width: 4.2em; /* input box width */
 } 
 
