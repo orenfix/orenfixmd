@@ -631,7 +631,7 @@ $(document).ready(function() {
 		var dcpGalad = parseFloat($("#dcpGalad").val());
 
 
-//		GALAD Score = -10.08 + 0.09 x A + 1.67 x G + 2.34 log10(AF) + 0.04 x L + 1.33 x log10(D)
+//		GALAD Score = -10.08 + 0.09 x age + 1.67 x sex (female=0, male=1) + 2.34 log10(AFP) + 0.04 x AFP-L3% + 1.33 x log10(DCP)
 		var galad = (-10.08 + 0.09 * ageGalad + 1.67 * sexGalad + 2.34 * Math.log10(afpGalad) + 0.04 * afpl3Galad + 1.33 * Math.log10(dcpGalad)).toFixed(2);
 
 //		Probability of concurrent HCC in this CLD patient = exp(Z) / (1 + exp(Z))
