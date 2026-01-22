@@ -28,7 +28,7 @@
 				<div class='header-toc'>
 					<h1>Hepatology Calculators</h1>
 					<h2>by <a href="https://orenfixmd.com" target="_blank">Oren Fix, MD</a></h2>
-					<h5 class='announcement'><b>NEW! AUDIT-C, REVERSE BMI, REVERSE LILLE, GALAD, AND LAD CALCULATORS</b></h5>
+					<h5 class='announcement'><b>NEW! AUDIT-C, REVERSE BMI, REVERSE LILLE, GALAD, LAD, AND ALBI</b></h5>
 				</div>
 				<ul data-role="listview">
 					<li><a href="#meld" data-transition="slide">MELD 3.0</a></li>
@@ -40,6 +40,7 @@
 					<li><a href="#retreat" data-transition="slide">RETREAT</a></li>
 					<li><a href="#galad" data-transition="slide">GALAD&nbsp;&nbsp;&nbsp;<b>NEW!</b></a></li>
 					<li><a href="#lad" data-transition="slide">LAD&nbsp;&nbsp;&nbsp;<b>NEW!</b></a></li>
+					<li><a href="#albi" data-transition="slide">ALBI&nbsp;&nbsp;&nbsp;<b>NEW!</b></a></li>
 					<li><a href="#fib4" data-transition="slide">FIB4</a></li>
 					<li><a href="#apri" data-transition="slide">APRI</a></li>
 										<li><a href="#nafld" data-transition="slide">NAFLD Fibrosis Score</a></li>
@@ -692,6 +693,35 @@
 			</div>
 			<div class='references'>
 				<a href="https://pubmed.ncbi.nlm.nih.gov/38896084" target="_blank">Reference</a>
+			</div>
+		</div>
+		</div>
+
+		<div data-role='page' data-title='ALBI Calculator' id='albi'>
+		<div class='outerWrapper'>
+
+			<h3>ALBI Calculator</h3>
+
+			<div class='back'><a href='#toc' title='back' data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline">back</a></div>
+			<div class="input" id="inputAlbi">	
+				<div data-role="fieldcontain">
+	    			<label for="albuminAlbi">Albumin</label>
+	    			<input type="number" name="albuminAlbi" placeholder="g/mL" id="albuminAlbi" />
+				</div>	
+				<div class="input" data-role="fieldcontain">
+	    			<label for="biliAlbi">Bilirubin</label>
+	    			<input type="number" name="biliAlbi" placeholder="mg/dL" id="biliAlbi" />
+				</div>
+			</div>
+
+			<button id="buttonAlbi">Calculate ALBI</button>
+			<div id="outputAlbi">
+				<p id="resultAlbi"></p>
+				<p id="gradeAlbi"></p>
+
+			</div>
+			<div class='references'>
+				<a href="https://pubmed.ncbi.nlm.nih.gov/?term=25512453+29234636+28614241+28736952+28626732" target="_blank">References</a>
 			</div>
 		</div>
 		</div>

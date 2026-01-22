@@ -698,62 +698,129 @@ $(document).ready(function() {
 	});
 
 
+//ALBI CALCULATOR
+
+	$("#buttonAlbi").click(function() {
+		var albuminAlbi = (parseFloat($("#albuminAlbi").val()))*10;
+		var biliAlbi = (parseFloat($("#biliAlbi").val()))*17.1;
+		var albi = ((Math.log10(biliAlbi) * 0.66) + (albuminAlbi * -0.085)).toFixed(2);
+		var gradeAlbi;
+		var survivalAlbi;
+
+		if (albi<=-2.60) {
+			gradeAlbi="Grade 1"
+			survivalAlbi="Median survival: 18.5-85.6 months<br/>(US cohort: 19.1 months)";
+			$("#outputAlbi").removeClass("redborder blueborder").addClass("border greenborder");
+			} else  if (albi <=-1.39) {
+			gradeAlbi="Grade 2"
+			survivalAlbi="Median survival: 5.3-46.5 months<br/>(US cohort: 11.6 months)";
+			$("#outputAlbi").removeClass("greenborder redborder").addClass("border blueborder");
+			} else {
+			gradeAlbi="Grade 3"
+			survivalAlbi="Median survival: 2.3-15.5 months<br/>(US cohort: 4.2 months)";
+			$("#outputAlbi").removeClass("greenborder blueborder").addClass("border redborder");
+		}
+			
+		if (isNaN(albuminAlbi) || isNaN(biliAlbi) || (albuminAlbi<=0) || (biliAlbi<=0)) {
+				$("#inputAlbi input[type='number']").removeClass("error");
+				if (isNaN(albuminAlbi) || (albuminAlbi<=0)) { $("#albuminAlbi").addClass("error"); }
+				if (isNaN(biliAlbi) || (biliAlbi<=0)) { $("#biliAlbi").addClass("error"); }
+				$("#outputAlbi").removeClass("border blueborder");
+				$("#resultAlbi").html("Enter a value").css({"color":"red"});
+				$("#recAlbi").html("");
+				
+				} else { 
+					$("#inputAlbi input[type='number']").removeClass("error");
+					$("#outputAlbi").addClass("border blueborder");
+					$("#resultAlbi").html("<b>ALBI score: </b>" + albi + "<br/><b>" + gradeAlbi + "</b>").css({"color":"black"});
+					$("#gradeAlbi").html(survivalAlbi).css({"color":"black"});
+				}
+	});
+
+
+
+
 //TRANSFER VALUES FROM ONE CALCULATOR TO ANOTHER
 
 	//BILI
-	//MELD, DF, Lille (Day 0), CTP
-	$("#biliMeld").blur(function() {
-		var biliMeld = $("#biliMeld").val();
-		$("#biliDf").val(biliMeld);
-		$("#bili0Mg_dL").val(biliMeld);
-		if (biliMeld<2) {
-			$("#biliCtp").val("1").change();
-			} else if (biliMeld>3) {
-			$("#biliCtp").val("3").change();
-			} else {
-			$("#biliCtp").val("2").change();
-		}
-	});
+	//DF, Lille (Day 0), CTP, ALBI (and old MELD calculator)
 	
 	$("#biliDf").blur(function() {
 		var biliDf = $("#biliDf").val();
 		$("#biliMeld").val(biliDf);
 		$("#bili0Mg_dL").val(biliDf);
+		$("#biliAlbi").val(biliDf);
+
 		if (biliDf<2) {
-			$("#biliCtp").val("1").change();
+			$("input[name='biliCtp'][value='1']").prop("checked", true).trigger("change");
+			if ($("#biliCtp").data("mobile-controlgroup")) { $("#biliCtp").controlgroup("refresh"); }
 			} else if (biliDf>3) {
-			$("#biliCtp").val("3").change();
+			$("input[name='biliCtp'][value='3']").prop("checked", true).trigger("change");
+			if ($("#biliCtp").data("mobile-controlgroup")) { $("#biliCtp").controlgroup("refresh"); }
 			} else {
-			$("#biliCtp").val("2").change();
+			$("input[name='biliCtp'][value='2']").prop("checked", true).trigger("change");
+			if ($("#biliCtp").data("mobile-controlgroup")) { $("#biliCtp").controlgroup("refresh"); }
 		}
+
 	});
 
 	$("#bili0Mg_dL").blur(function() {
 		var bili0Mg_dL = $("#bili0Mg_dL").val();
 		$("#biliMeld").val(bili0Mg_dL);
 		$("#biliDf").val(bili0Mg_dL);
+		$("#biliAlbi").val(bili0Mg_dL);
+
 		if (bili0Mg_dL<2) {
-			$("#biliCtp").val("1").change();
+			$("input[name='biliCtp'][value='1']").prop("checked", true).trigger("change");
+			if ($("#biliCtp").data("mobile-controlgroup")) { $("#biliCtp").controlgroup("refresh"); }
 			} else if (bili0Mg_dL>3) {
-			$("#biliCtp").val("3").change();
+			$("input[name='biliCtp'][value='3']").prop("checked", true).trigger("change");
+			if ($("#biliCtp").data("mobile-controlgroup")) { $("#biliCtp").controlgroup("refresh"); }
 			} else {
-			$("#biliCtp").val("2").change();
+			$("input[name='biliCtp'][value='2']").prop("checked", true).trigger("change");
+			if ($("#biliCtp").data("mobile-controlgroup")) { $("#biliCtp").controlgroup("refresh"); }
 		}
 	});
 
-	//PT/INR	
-	//From MELD, Lille, CTP, DF
-	$("#inrMeld").blur(function() {
-		var inrMeld = $("#inrMeld").val();
-		$("#ptLille").val(inrMeld);
-		if (inrMeld<1.7) {
-			$("#inrCtp").val("1").change();
-			} else if (inrMeld>2.3) {
-			$("#inrCtp").val("3").change();
+	$("#biliAlbi").blur(function() {
+		var biliAlbi = $("#biliAlbi").val();
+		$("#biliMeld").val(biliAlbi);
+		$("#biliDf").val(biliAlbi);
+		$("#bili0Mg_dL").val(biliAlbi);
+
+		if (biliAlbi<2) {
+			$("input[name='biliCtp'][value='1']").prop("checked", true).trigger("change");
+			if ($("#biliCtp").data("mobile-controlgroup")) { $("#biliCtp").controlgroup("refresh"); }
+			} else if (biliAlbi>3) {
+			$("input[name='biliCtp'][value='3']").prop("checked", true).trigger("change");
+			if ($("#biliCtp").data("mobile-controlgroup")) { $("#biliCtp").controlgroup("refresh"); }
 			} else {
-			$("#inrCtp").val("2").change();
+			$("input[name='biliCtp'][value='2']").prop("checked", true).trigger("change");
+			if ($("#biliCtp").data("mobile-controlgroup")) { $("#biliCtp").controlgroup("refresh"); }
 		}
 	});
+
+/*	$("#biliMeld").blur(function() {
+		var biliMeld = $("#biliMeld").val();
+		$("#biliDf").val(biliMeld);
+		$("#bili0Mg_dL").val(biliMeld);
+		$("#biliAlbi").val(biliMeld);
+
+		if (biliMeld<2) {
+			$("input[name='biliCtp'][value='1']").prop("checked", true).trigger("change");
+			if ($("#biliCtp").data("mobile-controlgroup")) { $("#biliCtp").controlgroup("refresh"); }
+			} else if (biliMeld>3) {
+			$("input[name='biliCtp'][value='3']").prop("checked", true).trigger("change");
+			if ($("#biliCtp").data("mobile-controlgroup")) { $("#biliCtp").controlgroup("refresh"); }
+			} else {
+			$("input[name='biliCtp'][value='2']").prop("checked", true).trigger("change");
+			if ($("#biliCtp").data("mobile-controlgroup")) { $("#biliCtp").controlgroup("refresh"); }
+		}
+	});
+*/
+
+	//PT/INR	
+	//From Lille, CTP, DF (and old MELD calculator)
 
 	$("#ptLille").blur(function() {
 		var ptLille = $("#ptLille").val();
@@ -776,43 +843,85 @@ $(document).ready(function() {
 		$("#ptLille").val(ptDf);
 	});
 
+/*	$("#inrMeld").blur(function() {
+		var inrMeld = $("#inrMeld").val();
+		$("#ptLille").val(inrMeld);
+		if (inrMeld<1.7) {
+			$("#inrCtp").val("1").change();
+			} else if (inrMeld>2.3) {
+			$("#inrCtp").val("3").change();
+			} else {
+			$("#inrCtp").val("2").change();
+		}
+	});
+*/
+
 	//ALBUMIN
-	//From NFS, Lille, CTP
+	//From NFS, Lille, CTP, ALBI
 	$("#albuminNafld").blur(function() {
 		var albuminNafld = $("#albuminNafld").val();
 		$("#albuminG_dL").val(albuminNafld);
+		$("#albuminAlbi").val(albuminNafld);
+
 		if (albuminNafld<2.8) {
-			$("#albCtp").val("3").change();
+			$("input[name='albCtp'][value='3']").prop("checked", true).trigger("change");
+			if ($("#albCtp").data("mobile-controlgroup")) { $("#albCtp").controlgroup("refresh"); }
 			} else if (albuminNafld>3.5) {
-			$("#albCtp").val("1").change();
+			$("input[name='albCtp'][value='1']").prop("checked", true).trigger("change");
+			if ($("#albCtp").data("mobile-controlgroup")) { $("#albCtp").controlgroup("refresh"); }
 			} else {
-			$("#albCtp").val("2").change();
+			$("input[name='albCtp'][value='2']").prop("checked", true).trigger("change");
+			if ($("#albCtp").data("mobile-controlgroup")) { $("#albCtp").controlgroup("refresh"); }
 		}
 	});
 
 	$("#albuminG_dL").blur(function() {
 		var albuminG_dL = $("#albuminG_dL").val();
 		$("#albuminNafld").val(albuminG_dL);
+		$("#albuminAlbi").val(albuminG_dL);
+
 		if (albuminG_dL<2.8) {
-			$("#albCtp").val("3").change();
+			$("input[name='albCtp'][value='3']").prop("checked", true).trigger("change");
+			if ($("#albCtp").data("mobile-controlgroup")) { $("#albCtp").controlgroup("refresh"); }
 			} else if (albuminG_dL>3.5) {
-			$("#albCtp").val("1").change();
+			$("input[name='albCtp'][value='1']").prop("checked", true).trigger("change");
+			if ($("#albCtp").data("mobile-controlgroup")) { $("#albCtp").controlgroup("refresh"); }
 			} else {
-			$("#albCtp").val("2").change();
+			$("input[name='albCtp'][value='2']").prop("checked", true).trigger("change");
+			if ($("#albCtp").data("mobile-controlgroup")) { $("#albCtp").controlgroup("refresh"); }
+		}
+	});
+
+	$("#albuminAlbi").blur(function() {
+		var albuminAlbi = $("#albuminAlbi").val();
+		$("#albuminNafld").val(albuminAlbi);
+		$("#albuminG_dL").val(albuminAlbi);
+
+		if (albuminAlbi<2.8) {
+			$("input[name='albCtp'][value='3']").prop("checked", true).trigger("change");
+			if ($("#albCtp").data("mobile-controlgroup")) { $("#albCtp").controlgroup("refresh"); }
+			} else if (albuminAlbi>3.5) {
+			$("input[name='albCtp'][value='1']").prop("checked", true).trigger("change");
+			if ($("#albCtp").data("mobile-controlgroup")) { $("#albCtp").controlgroup("refresh"); }
+			} else {
+			$("input[name='albCtp'][value='2']").prop("checked", true).trigger("change");
+			if ($("#albCtp").data("mobile-controlgroup")) { $("#albCtp").controlgroup("refresh"); }
 		}
 	});
 
 	//CREATININE
-	//From MELD, Lille
-	$("#creatinineMeld").blur(function() {
-		var creatinineMeld = $("#creatinineMeld").val();
-		$("#creatinineMg_dL").val(creatinineMeld);
-	});
+	//From Lille (and old MELD calculator)
 
 	$("#creatinineMg_dL").blur(function() {
 		var creatinineMg_dL = $("#creatinineMg_dL").val();
 		$("#creatinineMeld").val(creatinineMg_dL);
 	});	
+
+/*	$("#creatinineMeld").blur(function() {
+		var creatinineMeld = $("#creatinineMeld").val();
+		$("#creatinineMg_dL").val(creatinineMeld);
+	});
+*/
 
 	//AGE
 	//From NFS, Lille, Fib4, GALAD
@@ -842,30 +951,6 @@ $(document).ready(function() {
 		$("#ageFib4").val(ageGalad);
 		$("#ageNafld").val(ageGalad);
 	});
-
-/*
-	//SEX
-	//From AUDIT-C, GALAD
-	$('input[name="audit-c-sex"]').on('change', function() {
-		if (this.value == "male") {
-			$("#sexGalad-m").prop('checked',true);
-			$('#sexGalad').controlgroup('refresh');
-		} else if (this.value == "female") {
-			$("#sexGalad-f").prop('checked',true);
-			$('#sexGalad').controlgroup('refresh');
-		}
-	});
-
-	$('input[name="sexGalad"]').on('change', function() {
-		if (this.value == "1") {
-			$("#audit-c-sex-m").prop('checked',true);
-			$('#audit-c-sex').controlgroup('refresh');
-		} else if (this.value == "0") {
-			$("#audit-c-sex-f").prop('checked',true);
-			$('#audit-c-sex').controlgroup('refresh');
-		}
-	});
-*/
 	
 	//AST
 	//From APRI, Fib4, NFS
@@ -962,5 +1047,29 @@ $(document).ready(function() {
 		var dcpLad = $("#dcpLad").val();
 		$("#dcpGalad").val(dcpLad);
 	});
+
+/*
+	//SEX
+	//From AUDIT-C, GALAD
+	$('input[name="audit-c-sex"]').on('change', function() {
+		if (this.value == "male") {
+			$("#sexGalad-m").prop('checked',true);
+			$('#sexGalad').controlgroup('refresh');
+		} else if (this.value == "female") {
+			$("#sexGalad-f").prop('checked',true);
+			$('#sexGalad').controlgroup('refresh');
+		}
+	});
+
+	$('input[name="sexGalad"]').on('change', function() {
+		if (this.value == "1") {
+			$("#audit-c-sex-m").prop('checked',true);
+			$('#audit-c-sex').controlgroup('refresh');
+		} else if (this.value == "0") {
+			$("#audit-c-sex-f").prop('checked',true);
+			$('#audit-c-sex').controlgroup('refresh');
+		}
+	});
+*/
 
 });
