@@ -28,19 +28,20 @@
 				<div class='header-toc'>
 					<h1>Hepatology Calculators</h1>
 					<h2>by <a href="https://orenfixmd.com" target="_blank">Oren Fix, MD</a></h2>
-					<h5 class='announcement'><b>NEW! AUDIT-C, REVERSE BMI, REVERSE LILLE, GALAD, LAD, AND ALBI</b></h5>
+<!--					<h5 class='announcement'><b>NEW! AUDIT-C, REVERSE BMI, REVERSE LILLE, GALAD, LAD, AND ALBI</b></h5>
+-->
 				</div>
 				<ul data-role="listview">
 					<li><a href="#meld" data-transition="slide">MELD 3.0</a></li>
-					<li><a href="#bmi" data-transition="slide">BMI &nbsp;&nbsp;&nbsp;<b>NEW!</b></a></li>
+					<li><a href="#bmi" data-transition="slide">BMI</a></li>
 					<li><a href="#ctp" data-transition="slide">Child-Turcotte-Pugh</a></li>
-					<li><a href="#audit" data-transition="slide">AUDIT-C &nbsp;&nbsp;&nbsp;<b>NEW!</b></a></li>
+					<li><a href="#audit" data-transition="slide">AUDIT-C</a></li>
 					<li><a href="#df" data-transition="slide">Maddrey's Discriminant Function</a></li>
-					<li><a href="#lille" data-transition="slide">Lille Model &nbsp;&nbsp;&nbsp;<b>NEW!</b></a></li>
+					<li><a href="#lille" data-transition="slide">Lille Model</a></li>
 					<li><a href="#retreat" data-transition="slide">RETREAT</a></li>
-					<li><a href="#galad" data-transition="slide">GALAD&nbsp;&nbsp;&nbsp;<b>NEW!</b></a></li>
-					<li><a href="#lad" data-transition="slide">LAD&nbsp;&nbsp;&nbsp;<b>NEW!</b></a></li>
-					<li><a href="#albi" data-transition="slide">ALBI&nbsp;&nbsp;&nbsp;<b>NEW!</b></a></li>
+					<li><a href="#galad" data-transition="slide">GALAD</a></li>
+					<li><a href="#lad" data-transition="slide">LAD</a></li>
+					<li><a href="#albi" data-transition="slide">ALBI</a></li>
 					<li><a href="#fib4" data-transition="slide">FIB4</a></li>
 					<li><a href="#apri" data-transition="slide">APRI</a></li>
 										<li><a href="#nafld" data-transition="slide">NAFLD Fibrosis Score</a></li>
@@ -142,7 +143,6 @@
 
 				<h3>BMI</h3>
 
-				<h5 class='announcement'><b>NEW! REVERSE BMI CALCULATOR: </b><br>Calculate the weight needed for a target BMI</h5>
 				<div class='back'><a href='#toc' title='back' data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline">back</a></div>
 				<div class="input" id="inputBmi">
 					<div class="input" data-role="fieldcontain">
@@ -182,6 +182,7 @@
 
 			<div class='outerWrapper'>
 				<h3 class='reverseBmi'>Reverse BMI Calculator</h3>
+				<h5 class='announcement'>Calculate the weight needed for a target BMI</h5>
 				<h5>Enter height above and select goal BMI below to calculate target weight</h5>
 					<div class="input" id="inputReverseBmi">
 						<div class="input" data-role="fieldcontain">
@@ -381,7 +382,6 @@
 
 			<h3>Lille Model</h3>
 
-			<h5 class='announcement'><b>NEW! REVERSE LILLE CALCULATOR: </b><br>Leave bilirubin day 4/7 blank for reverse Lille calculator (calculates maximum bilirubin allowed for favorable prognosis)</h5>
 			<div class='back'><a href='#toc' title='back' data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline">back</a></div>
 			<div class="input" id="inputLille">
 				<label for="ageLille">Age</label>
@@ -396,7 +396,9 @@
 				<input type="number" id="ptLille" />
 				<label for="bili7Mg_dL">Bilirubin, Day 4 or 7</label>
 				<input type="number" placeholder="mg/dL" id="bili7Mg_dL" />
-				<p><small><i>Leave bilirubin day 4/7 blank for 'reverse Lille calculator'<br> (calculates maximum bilirubin allowed for favorable prognosis)</i></small></p>			
+				<h5 class='announcement'><b>REVERSE LILLE CALCULATOR: </b><br>Leave bilirubin day 4/7 blank to calculate maximum bilirubin allowed for favorable prognosis</h5>
+<!--				<p><small><i>Leave bilirubin day 4/7 blank for 'reverse Lille calculator'<br> (calculates maximum bilirubin allowed for favorable prognosis)</i></small></p>			
+-->
 			</div>
 
 			<button id="buttonLille">Calculate Lille Model</button>
