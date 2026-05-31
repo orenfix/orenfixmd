@@ -82,8 +82,8 @@ h3 {
 }
 
 .list img {
-	width: auto;
-	height: 3.5rem;
+	width: 4rem;
+	height: auto;
 	margin-left: 1rem;
 }
 ul {
@@ -120,6 +120,20 @@ a, a:visited {
 	line-height: 1.6rem;
 	display: block;
 	max-width: 486px;
+	margin: 0 auto .8rem auto;
+	color: rgb(80,210,255); /*blue*/
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	color: rgb(0,181,255); /*blue*/
+}
+
+li a, li a:visited {
+	font-size: 1.2rem;
+	line-height: 1.6rem;
+	display: block;
+	max-width: 486px;
 	padding: 1rem 2rem;
 	margin: 0 auto .8rem auto;
 	border-radius: 4px;
@@ -129,18 +143,18 @@ a, a:visited {
 	text-decoration: none;
 }
 
+li a:hover, li a:active {
+	color: white;
+	background-color: rgb(226,87,32); /*orange*/
+	background-color: rgb(0,181,255); /*blue*/
+}
+
 .large_font {
 	font-size: 1.7rem;
 }
 
 .small {
 	font-size: 1.2rem;
-}
-
-a:hover, a:active {
-	color: white;
-	background-color: rgb(226,87,32); /*orange*/
-	background-color: rgb(0,181,255); /*blue*/
 }
 
 footer {
