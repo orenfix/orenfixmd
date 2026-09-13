@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang='en-US'>
+	<head>
+
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-KR8TBH7');</script>
+		<!-- End Google Tag Manager -->
+
+		<meta charset='UTF-8'>
+		<meta name='viewport' content='width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0' />
+		<meta name='apple-web-app-capable' content='yes' />
+		<link type='text/css' rel='apple-touch-icon' href='../resources/images/c-life_web_app_icon.png' />
+		<link href='../resources/images/favicon.ico' rel='shortcut icon' type='images/x-icon' />
+		<!--[if lt IE 9]>
+			<script src='html5shiv.js'></script>
+		<![endif]-->
+		<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
+		<link rel='stylesheet' href='rhiml.css'>
+		<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="jquery.mobile-1.4.5.min.js"></script>
+		<script type='text/javascript' src='rhiml.js'></script>
+		<script type='text/javascript' src='rhiml.txt'></script>
+		<script src='respond.min.js' type='text/javascript' ></script>
+		<title>RHIML Calculator</title>
+	</head>
+	<body>
+
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KR8TBH7"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		
+		<div data-role='page' id='calculator'>
+		<div id='outerWrapper'>
+			<div class='link'><a href='#about' title='About this calculator' data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline">about</a></div>
+			<h1><span>R</span>ecurrent <span>H</span>CC<br>
+			<span>I</span>nitial <span>M</span>ax <span>L</span>ast<br>
+			calculator</h1>
+				<div id='tumorBurden'>
+					<h2>Tumor Burden</h2>
+					<fieldset data-role='controlgroup' data-type='horizontal'>
+						<legend>Initial</legend>
+						<input type='radio' name='initial' id='initial-1' value='1' checked>
+						<label for='initial-1' class='middle'>&lt; Milan</label>
+						<input type='radio' name='initial' id='initial-2' value='2'>
+						<label for='initial-2' class='middle'>Milan</label>
+						<input type='radio' name='initial' id='initial-3' value='3'>
+						<label for='initial-3'>&gt; Milan<br>&le; UCSF</label>
+						<input type='radio' name='initial' id='initial-4' value='4'>
+						<label for='initial-4' class='middle'>&gt; UCSF</label>
+					</fieldset>
+					<fieldset data-role='controlgroup' data-type='horizontal'>
+						<legend>Max</legend>
+						<input type='radio' name='max' id='max-1' value='1' checked>
+						<label for='max-1' class='middle'>&lt; Milan</label>
+						<input type='radio' name='max' id='max-2' value='2'>
+						<label for='max-2' class='middle'>Milan</label>
+						<input type='radio' name='max' id='max-3' value='3'>
+						<label for='max-3'>&gt; Milan<br>&le; UCSF</label>
+						<input type='radio' name='max' id='max-4' value='4'>
+						<label for='max-4' class='middle'>&gt; UCSF</label>
+					</fieldset>
+					<fieldset data-role='controlgroup' data-type='horizontal'>
+						<legend>Last</legend>
+						<input type='radio' name='last' id='last-1' value='1' checked>
+						<label for='last-1' class='middle'>&lt; Milan</label>
+						<input type='radio' name='last' id='last-2'  value='2'>
+						<label for='last-2' class='middle'>Milan</label>
+						<input type='radio' name='last' id='last-3'  value='3'>
+						<label for='last-3'>&gt; Milan<br>&le; UCSF</label>
+						<input type='radio' name='last' id='last-4'  value='4'>
+						<label for='last-4' class='middle'>&gt; UCSF</label>
+					</fieldset>
+				</div>
+
+				<div id='covariables'>
+					<fieldset data-role='controlgroup'>
+						<label><input type='checkbox' name='waitTime' value='1'>Wait time &ge; 6 mo?</label>
+						<label><input type='checkbox' name='afp' value='1'>AFP &ge; 500 (ever)?</label>
+						<label><input type='checkbox' name='treatment' value='1'>Treatment (ever)?</label>
+					</fieldset>
+				</div>
+
+				<div id='risk'>
+					<table>
+						<tr><th colspan='6'>Recurrent HCC Risk:</th></tr>
+						<tr><td class='right'>1 yr:</td><td id='Yr1' class='blue'></td><td class='right'>2 yr:</td><td id='Yr2' class='blue'></td><td class='right'>3 yr:</td><td id='Yr3' class='blue'></td></tr>
+					</table>
+				</div>
+
+				<div id='error'></div>
+
+				<div id='iml'>
+					<table>
+						<tr><td>IML Code: </td><td id='imlCode' class='blue'></td><td>Ablate / Wait / AFP: </td><td id='awa' class='blue'></td></tr>
+					</table>
+				</div>
+
+			<footer>
+				<p>&copy; <script>document.write(new Date().getFullYear());</script>. App by Oren Fix, MD</p>
+				<p>Everything else by Scott Biggins, MD</p>
+			</footer>
+		</div>	
+		</div>
+		<div data-role='page' data-title="RHIML Calculator | about" id='about'>
+			<div id='outerWrapper-about'>
+			<div class='link'><a href='#calculator' title='back to calculator' data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline">back</a></div>
+			<h1><span>R</span>ecurrent <span>H</span>CC<br>
+			<span>I</span>nitial <span>M</span>ax <span>L</span>ast<br>
+			calculator</h1>
+			<div id='aboutContainer'>
+				<h2>About</h2>
+					<p>Unlike current allocation policy that only uses HCC burden at one time point, the RH-IML calculator uses a summative measure of pre-liver transplant HCC burden that incorporates tumor behavior and treatment response to predict the risk of post-liver transplant recurrent HCC.</p>
+				<h2>Publication</h2>
+					<p>Vutien P, Dodge J, Bambha KM, Nordstrom EM, Gralla J, Campbell K, Levek C, Nydam T, Fix O, Ioannou G, Biggins SW. A simple measure of hepatocellular carcinoma burden predicts tumor recurrence after liver transplantation: The RH-IML classification. Accepted for publication in <i>Liver Transplantation.</i></p>
+				<h2>The data</h2>
+					<p>Using UNOS data from 2002-2014, 16,558 liver transplant recipients with HCC (any stage) were assessed for HCC size (total diameter), pre-liver transplant treatment and post-liver transplant recurrent HCC.</p>
+					<p>HCC was measured at 3 dates on the waitlist: (I) Initial, (M) Max, (L) Last. Tumor burden at each date was classified as:</p>
+					<ol type='A'>
+						<li>&lt; Milan</li>
+						<li>Milan</li>
+						<li>&gt; Milan to &le; UCSF</li>
+						<li>&gt; UCSF</li>
+					</ol>
+				<h2>Milan and UCSF criteria</h2>
+				<h3>Milan criteria</h3>
+					<ul class='first-ul'>
+						<li>single tumor &le; 5 cm, or</li>
+						<li>2 or 3 tumors, each &le; 3 cm</li>
+					</ul>
+				<h3>UCSF criteria</h3>
+					<ul>
+						<li>single tumor &le; 6.5 cm, or</li>
+						<li>2 or 3 tumors, each &le; 4.5 cm</li>
+						<li>total tumor diameter &le; 8 cm</li>
+					</ul>
+				<h2>Statistical analysis</h2>
+					<p>Chi-Square tests assessed associations of IML coordinates with post-liver transplant recurrent HCC. Confounders (age, sex, race, MELD, wait-time, pre-liver transplant HCC treatment, AFP, DRI) were assessed.</p>
+				<h2>Insufficient data</h2>
+					<p>Of the 64 potential combinations of IML, only 30 make clinical sense as max can not be less than initial or last. Of those 30 clinically viable combinations, 10 did not have sufficient power and 3 combinations did not occur in the available data, leaving 17 IML combinations with sufficient power to predict post-liver transplant recurrent HCC.</p>
+				<h2>App development team</h2>
+					<h3>Scott W. Biggins, MD, MAS:</h3>
+						<p>Dr. Biggins is a transplant hepatologist, Professor of Medicine, Endowed Chair for Patient-Centered Care, Chief of Hepatology, and Medical Director of Liver Transplantation at the University of Pittsburgh Medical Center. Dr. Biggins and his research team from the University of Washington, University of Colorado, and the University of California San Francisco developed the RH-IML calculator.</p>
+					<h3>Research Team:</h3>
+						<p>Scott W. Biggins, Philip Vutien, Jennifer L. Dodge, Kiran M. Bambha, Eric M. Nordstrom, Jane Gralla, Kristen Campbell, Clair Levek, Trevor L. Nydam, Oren K. Fix, George Ioannou</p>
+					<h3>Oren Fix, MD, MSc:</h3>
+						<p>Dr. Fix is the Medical Director of Liver Transplantation and a Lead Informatics Physician at the University of North Carolina at Chapel Hill</p>
+			</div>			
+			<footer>
+				<p>&copy; <script>document.write(new Date().getFullYear());</script>. App by Oren Fix, MD</p>
+				<p>Everything else by Scott Biggins, MD</p>
+			</footer>
+		</div>	
+		</div>
+	</body>
+</html>

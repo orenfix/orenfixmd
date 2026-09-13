@@ -1,0 +1,237 @@
+
+/* Turn on to see border around risk table
+td {
+	border: 1px solid black;
+}
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+body, h1, h2, h3, a, fieldset, input, legend, label, table, th, tr, td, p, ol, ul, li, footer, p {
+	margin: 0;
+	padding: 0;
+} 
+/**************** COLORS ***************/
+
+
+h1, h2, th {
+	color: rgb(53,94,160);
+}
+h1 span {
+	color: rgb(77,173,37);
+}
+legend, .blue, #outerWrapper a:link, #outerWrapper a:visited, #outerWrapper-about a:link, #outerWrapper-about a:visited, #aboutContainer h3 {
+	color: rgb(77,173,37) !important;
+}
+#tumorBurden .ui-radio-on {
+	background-color: rgb(53,94,160);
+	border-color: rgb(53,94,160);
+}
+.ui-checkbox-on:after {
+	background-color: rgb(53,94,160) !important;
+}
+/***************************************/
+
+#calculator, #about, .ui-btn {
+	font-family: 'Raleway', Helvetica, sans-serif;
+}
+#outerWrapper {
+	font-size: 100%;
+	font-weight: normal;
+	line-height: 1em;
+	max-width: 450px;
+	padding: 1em;
+	text-align: center;
+}
+img {
+	width: 100px;
+	border-radius: 8px;
+}
+.link {
+	position: absolute;
+	top: 1em;
+	left: 1em;
+	font-size: .9em;
+}
+h1 {
+	font-size: 1.3em;
+	font-weight: normal;
+	text-align: center;
+	line-height: 1.2em;
+	letter-spacing: 1.5px;
+}
+h1 span {
+		font-size: 1.2em;
+}
+h2 {
+	font-size: 1em;
+	font-weight: bold;
+	text-align: center;
+	padding: 1em 0 .5em 0;
+}
+legend {
+	font-size: .9em;
+	font-weight: bold;
+	margin: 0 auto;
+}
+#tumorBurden label {
+	font-size: .8em;
+	height: 2.5em;  
+	text-align: center;
+}
+#tumorBurden label.middle {
+	line-height: 2.5em;
+}
+#tumorBurden fieldset {
+	padding-bottom: 1em;
+}
+#covariables label {
+	font-size: .9em;
+}
+#covariables {
+	max-width: 300px;
+	margin: 0 auto;
+	padding-bottom: 1em;
+}
+#covariables label {
+	font-size: .9em;
+}
+#risk {
+	max-width: 396px; 
+	border: 2px solid rgb(49,72,191);
+	border-radius: 10px;
+	padding: .5em 5px;
+	margin: 0 auto;
+	/*cursor: pointer; */
+	font-size: .9em;
+}
+table {
+	border-collapse: collapse;
+	margin-bottom: 1em;
+	table-layout: fixed;
+	max-width: 339px; 
+}
+th {
+	font-size: 1.5em;
+	padding: .5em 0;
+}
+td {
+	width: 60px; 
+	padding: .2em .3em;
+	text-align: center;
+	font-weight: bold;
+}	
+#iml {
+	padding-top: 0;
+	font-size: .9em;
+}
+#iml table {
+	margin: 0 auto;
+}
+#error {
+	font-weight: bold;
+	text-align: center;
+	color: red;
+	height: 1em;
+	padding: .5em 0;
+	font-size: .9em;
+}
+footer {
+	font-size: .8em;
+	border-top: 1px solid rgb(49,72,191);
+	padding: .5em 0;
+	margin-top: .5em;
+	text-align: center;
+}
+.right {
+	text-align: right;
+}
+.blue {
+	padding: 0;
+	font-size: 1.2em;
+}
+#outerWrapper-about {
+	font-size: 100%;
+	font-weight: normal;
+	line-height: 1em;
+	max-width: 600px;
+	padding: 1em;
+	text-align: center;
+}
+#outerWrapper a, #outerWrapper-about a {
+	font-size: .8em;
+	font-weight: normal;
+	cursor: pointer;
+	text-decoration: none;
+}
+#aboutContainer p {
+	font-size: .9em;
+	text-align: left;
+	line-height: 1.3em;
+	padding-bottom: .5em;
+}
+#aboutContainer ol, #aboutContainer ul {
+	font-size: .9em;
+	text-align: left;
+	line-height: 1.3em;
+	margin-left: 2em;
+}
+#aboutContainer ul {
+		list-style-type: circle;
+}
+#aboutContainer ul.first-ul {
+	padding-bottom: 1em;
+}
+#aboutContainer h3 {
+	font-size: 1em;
+	font-weight: bold;
+	text-align: left;
+	padding: .3em 0;	
+}
+@media only screen and (min-width: 550px) {
+	img {
+		width: 144px;
+	}
+	h1 {
+		font-size: 1.8em;
+	}
+	h2 {
+		font-size: 1.5em;
+	}
+	#aboutContainer h3 {
+		font-size: 1.1em;
+	}
+	#outerWrapper a, #outerWrapper-about a {
+		font-size: .9em;
+	}
+	#aboutContainer p {
+		font-size: 1em;
+	}
+	#aboutContainer ol, #aboutContainer ul {
+		font-size: 1em;
+	}
+	legend {
+		font-size: 1.2em;
+	}
+	#tumorBurden label {
+		font-size: 1em; 
+	}
+	#covariables {
+		max-width: 342px;
+	}
+	#covariables label {
+		font-size: 1em;
+	}
+	#risk {
+		font-size: 1em;
+	}
+	#error {
+		font-size: 1em;
+	}
+	#iml {
+		font-size: 1em;
+	}
+	.blue {
+		font-size: 1.3em;
+	}
+}
