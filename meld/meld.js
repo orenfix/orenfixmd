@@ -123,28 +123,28 @@ $(".ui-slider-handle, .ui-btn").attr("tabindex", "-1");
 	$("#creatinineButtonPlus").bind("touchend",function(e) {
 		e.preventDefault();
 		var creatinine = parseFloat($("#creatinine").val());
-		creatinine=(creatinine+.01).toFixed(2);
+		creatinine=(creatinine+.1).toFixed(1);
 		$("#creatinine").val(creatinine).trigger("blur");
 	});
 
 	$("#creatinineButtonPlus").click(function(e) {
 		e.preventDefault();
 		var creatinine = parseFloat($("#creatinine").val());
-		creatinine=(creatinine+.01).toFixed(2);
+		creatinine=(creatinine+.1).toFixed(1);
 		$("#creatinine").val(creatinine).trigger("blur");
 	});
 
 	$("#creatinineButtonMinus").bind("touchend",function(e) {
 		e.preventDefault();
 		var creatinine = parseFloat($("#creatinine").val());
-		creatinine=(creatinine-.01).toFixed(2);
+		creatinine=(creatinine-.1).toFixed(1);
 		$("#creatinine").val(creatinine).trigger("blur");
 	});
 
 	$("#creatinineButtonMinus").click(function(e) {
 		e.preventDefault();
 		var creatinine = parseFloat($("#creatinine").val());
-		creatinine=(creatinine-.01).toFixed(2);
+		creatinine=(creatinine-.1).toFixed(1);
 		$("#creatinine").val(creatinine).trigger("blur");
 	});
 
